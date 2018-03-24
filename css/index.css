@@ -7,6 +7,15 @@
   margin-left: 35%;
 }
 
+#photo-boot
+{
+  width: 25vw;
+  height: 14.0625vw;
+  z-index: 1;
+  position: absolute;
+  margin-left: 35%;
+}
+
 p
 {
   color: white;
