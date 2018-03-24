@@ -6,8 +6,8 @@
 
 		<p id="paragraphe-centré">
 			Ce site a été réalisé grâce à Bootstrap.
-
-			Le lien de l'image de fond : <a>https://goo.gl/NgDLW5</a>
+			<br><br>
+			<a href="https://goo.gl/NgDLW5">Le lien de l'image de fond :</a>
 		</p>
   </body>
 </html>
