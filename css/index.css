@@ -16,6 +16,16 @@ p
   margin-left: 50%;
 }
 
+#paragraphe-centré
+{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
 #back-image
 {
   width:100%;
