@@ -2,7 +2,7 @@
 <html>
 <!-- Entête de paramètres, présent sur toutes les pages nécessitant un affichage -->
 	<head>
-		<title>Accueil</title>
+		<title>Site de Hugo</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
 		<meta http-equiv="content-style-type" content="text/css">
@@ -33,7 +33,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Portefeuille de compétences</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Veille technologique</a>
+          <a class="dropdown-item" href="veille.php">Veille technologique</a>
         </div>
       </li>
 
@@ -45,4 +45,3 @@
 </nav>
 
 <body>
-  
