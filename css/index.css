@@ -1,7 +1,7 @@
 #photo-profil
 {
   width: 14.0625vw;
-  height: 25vw;
+  height: 25vh;
   z-index: 1;
   position: absolute;
   margin-left: 35%;
@@ -10,7 +10,7 @@
 #photo-boot
 {
   width: 25vw;
-  height: 14.0625vw;
+  height: 14.0625vh;
   z-index: 1;
   position: absolute;
   margin-left: 35%;
