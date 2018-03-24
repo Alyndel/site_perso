@@ -26,18 +26,14 @@
       <li class="nav-item">
         <a class="nav-link" href="#">E4</a>
       </li>
-      <li class="nav-item dropdown">
-    		<a class="nav-link dropdown-toggle" href="veille.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          E6
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Portefeuille de compétences</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="veille.php">Veille technologique</a>
-        </div>
+			<li class="nav-item">
+        <a class="nav-link" href="comp.php">Portefeuille de compétences</a>
       </li>
-
+			<li class="nav-item">
+        <a class="nav-link" href="veille.php">Veille technologique</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">A propos</a>
+        <a class="nav-link" href="a_propos.php">A propos</a>
       </li>
     </ul>
   </div>
