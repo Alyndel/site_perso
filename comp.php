@@ -2,7 +2,7 @@
 	include 'header.php';
  ?>
 		<img src="img/back.jpg" id="back-image">
-		<p id="paragraphe-centré">
+		<div id="paragraphe">
 			<div class="card">
 			  <div class="card-body">
 			    <h5 class="card-title">Conception d'un applicatif et export de données vers un SGBD PostreSQL pour Novae Aerospace</h5>
@@ -12,7 +12,7 @@
 					</p>
   			</div>
 			</div>
-		</p>
+		</div>
 
   </body>
 </html>

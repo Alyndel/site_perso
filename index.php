@@ -4,7 +4,7 @@
 
 	<img src="img/photo.jpg" id="photo-profil">
 	<img src="img/back.jpg" id="back-image">
-	<p>
+	<div id="paragraphe">
 		<br>
 		NITARD Hugo
 		<br><br>
@@ -13,7 +13,7 @@
 		Option SLAM (Solutions Logicielles et Applications Métiers)
 		<br><br>
 		👍 Développement Web
-	</p>
+	</div>
 </body>
 
 </html>
