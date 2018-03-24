@@ -25,6 +25,11 @@
   margin-right: 20%;
 }
 
+.panel-body
+{
+  background-color: grey;
+}
+
 #paragraphe-centré
 {
   color: white;

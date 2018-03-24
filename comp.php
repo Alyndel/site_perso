@@ -39,7 +39,7 @@
 		  </div>
 
 		  <div class="card">
-		    <div class="card-header mb-2" id="headingTwo">
+		    <div class="card-header" id="headingTwo">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 							Élaboration d'un cahier des charges pour le site du pôle gérontologique de Virieu-Bourgoin
