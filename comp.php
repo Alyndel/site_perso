@@ -15,7 +15,23 @@
 
 		    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 		      <div class="card-body">
-		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		        A1.1.1 , Analyse du cahier des charges d'un service à produire
+						<br>
+						A1.2.5 , Définition des niveaux d'habilitation associés à un service
+						<br>
+						A1.3.4 , Déploiement d'un service
+						<br>
+						A2.2.1 , Suivi et résolution d'incidents
+						<br>
+						A2.3.2 , Proposition d'amélioration d'un service
+						<br>
+						A3.2.2 , Remplacement ou mise à jour d'éléments défectueux ou obsolètes
+						<br>
+						A4.1.1 , Proposition d'une solution applicative
+						<br>
+						A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
+						<br>
+						A4.1.3 , Conception ou adaptation d'une base de données
 		      </div>
 		    </div>
 		  </div>
