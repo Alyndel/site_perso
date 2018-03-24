@@ -1,8 +1,9 @@
 <?php
 	include 'header.php';
  ?>
+		<img src="img/bootstrap.jpg" id="photo-boot">
 		<img src="img/back.jpg" id="back-image">
-		<img src="img/bootstrap.jpg" id="photo-boot"
+
 		<p>
 			Ce site a été réalisé grâce à Bootstrap.
 
