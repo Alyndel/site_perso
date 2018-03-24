@@ -4,7 +4,7 @@
 
 	<img src="img/photo.jpg" id="photo-profil">
 	<img src="img/back.jpg" id="back-image">
-	<p id=id="paragraphe">
+	<p id="paragraphe">
 		<br>
 		NITARD Hugo
 		<br><br>
