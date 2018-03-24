@@ -17,6 +17,11 @@
   width: 40%;
 }
 
+#accordion
+{
+  z-index: 2;
+}
+
 #paragraphe-centré
 {
   color: white;
