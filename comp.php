@@ -89,7 +89,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingFour">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseFour">
 							Réalisation d'une veille sur le DOS (Déni de service)
 						</button>
 		      </h5>
@@ -106,7 +106,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingFive">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseFive">
 							Réalisation d'une classe inversée sur Ruby On Rails
 						</button>
 		      </h5>
@@ -123,7 +123,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingSix">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseSix">
 							Réalisation d'un cahier des charges
 						</button>
 		      </h5>
@@ -144,7 +144,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingSeven">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseSeven">
 							Réalisation de maquettes HTML / CSS / Javascript
 						</button>
 		      </h5>
@@ -167,7 +167,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingEight">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseEight">
 							Prise en main de Ruby on Rails
 						</button>
 		      </h5>
@@ -188,7 +188,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingNine">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseNine">
 							Analyse besoins base de données pour une application Ruby on Rails
 						</button>
 		      </h5>
@@ -215,7 +215,7 @@
 			<div class="card">
 		    <div class="card-header" id="headingTen">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTen">
 							Développement applicatif Ruby on Rails
 						</button>
 		      </h5>
