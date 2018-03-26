@@ -1,0 +1,48 @@
+header
+{
+	background-color: rgba(104,129,151,0.25); 			/* Couleur du bandeau */
+}
+
+#logo
+{
+	padding-bottom: 20px;									/* Marges, afin que le logo */
+	padding-left: 20px;										/* puisse respirer */
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+#titre
+{
+	font-family: Ubuntu;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25)
+}
+
+body
+{
+	margin: auto;
+	background-color: #FFFFFF;								/* Réglage de la couleur du fond en mode (Red Green Blue Alpha) */
+	font-family: Ubuntu;										/* Alpha représentant la transparence */
+}
+
+#tableau
+{
+	text-align: center;
+	margin: auto;												/* Permet de centrer le tableau au niveau horizontal */
+	padding-top: 200px;										/* Permet de décaler le tableau de 200px verticalement */
+	color: #575757;											/* Réglage de la couleur de la police du tableau */
+}
+#tableau td
+{
+	width: 150px;												/* Définit la taille d'une cellule du tableau */
+}
+input
+{
+	color: #575757;
+	border-radius: 10px 10px 0px 10px;					/* Permet d'arrondir les bords, et de leur donner un angle droit si voulu */
+	height: 25px;
+}

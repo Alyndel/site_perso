@@ -1,0 +1,70 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	width: 100%;
+	margin: auto;
+	height: 143px;
+	text-align: center;
+}
+
+#titre
+{
+	float: left;
+	text-align: center;
+	margin: auto;
+	color: #575757;
+	font-size: 14px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#deco
+{
+	background-color: #00B2A9;
+	width: 100px;
+	height: 143px;
+	border-radius: 10px 10px 0px 10px;
+	float: right;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25)
+}
+
+body
+{
+	margin: auto;
+}
+#t_soutirage
+{
+	margin: auto;
+	font-family: Ubuntu;
+	text-align: center;
+	color: #005EB8;
+}
+
+#tete_tableau
+{
+	font-size: 20px;
+}
+
+td
+{
+	width: 100px;
+}
+
+input
+{
+	color: #575757;
+	width: 50px;
+}

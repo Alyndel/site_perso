@@ -34,6 +34,8 @@
 						Pratique , A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
 						<br>
 						Maîtrise , A4.1.3 , Conception ou adaptation d'une base de données
+						<br>
+						<a href="pdf/novae.pdf"><u>Lien vers le pdf (Analyse de l'existant)</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -73,11 +75,11 @@
 		      <div class="card-body">
 		        		Vu , A1.3.1 , Test d'intégration et d'acceptation d'un service
 						<br>
-						Pratique , A1.3.4 , Déploiement d'un service
+						Vu , A1.3.4 , Déploiement d'un service
 						<br>
-						Pratique , A1.4.1 , Participation à un projet
+						Maîtrise , A1.4.1 , Participation à un projet
 						<br>
-						Pratique , A1.4.3 , Gestion des ressources
+						Vu , A1.4.3 , Gestion des ressources
 						<br>
 						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
@@ -99,6 +101,8 @@
 						Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode
 						<br>
 						Maîtrise , A5.2.2 , Veille technologique
+						<br>
+						<a href="pdf/veille_dos.pdf"><u>Lien vers le pdf</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -116,6 +120,8 @@
 						Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode
 						<br>
 						Maîtrise , A5.2.4 , Étude d'une technologie, d'un composant, d'un outil ou d'une méthode
+						<br>
+						<a href="pdf/ror.pdf"><u>Lien vers l'évaluation</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -124,7 +130,7 @@
 		    <div class="card-header" id="headingSix">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-							Réalisation d'un cahier des charges
+							Réalisation d'un cahier des charges (1er stage)
 						</button>
 		      </h5>
 		    </div>
@@ -137,6 +143,8 @@
 						Pratique , A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
 						<br>
 						Pratique , A1.2.2 , Rédaction des spécifications techniques de la solution retenue
+						<br>
+						<a href="pdf/cahier_enedis.pdf"><u>Lien vers le pdf</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -145,7 +153,7 @@
 		    <div class="card-header" id="headingSeven">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-							Réalisation de maquettes HTML / CSS / Javascript
+							Réalisation de maquettes HTML / CSS / Javascript (1er stage)
 						</button>
 		      </h5>
 		    </div>
@@ -160,6 +168,8 @@
 						Pratique , A3.1.3 , Prise en compte du niveau de sécurité nécessaire
 						<br>
 						Pratique , A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
+						<br>
+						<a href="maquettes/index.html"><u>Lien vers les maquettes</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -168,7 +178,7 @@
 		    <div class="card-header" id="headingEight">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-							Prise en main de Ruby on Rails
+							Prise en main de Ruby on Rails (2ème stage)
 						</button>
 		      </h5>
 		    </div>
@@ -181,6 +191,8 @@
 						Maîtrise , A5.2.2 , Veille technologique
 						<br>
 						Pratique , A5.2.4 , Étude d'une technologie, d'un composant, d'un outil ou d'une méthode
+						<br>
+						<a href="https://bitbucket.org/kikan/ma-boutique/wiki/Home"><u>Lien vers les tutoriels effectués</u></a>
 		      </div>
 		    </div>
 		  </div>
@@ -189,7 +201,7 @@
 		    <div class="card-header" id="headingNine">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-							Analyse besoins base de données pour une application Ruby on Rails
+							Analyse besoins base de données pour une application Ruby on Rails (2ème stage)
 						</button>
 		      </h5>
 		    </div>
@@ -208,6 +220,8 @@
 						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
 						Maîtrise , A4.1.3 , Conception ou adaptation d'une base de données
+						<br>
+						<img src="img/diagramme_base.jpg" alt="" width="75%" height="75%">
 		      </div>
 		    </div>
 		  </div>
@@ -216,7 +230,7 @@
 		    <div class="card-header" id="headingTen">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-							Développement applicatif Ruby on Rails
+							Développement applicatif Ruby on Rails (2ème stage)
 						</button>
 		      </h5>
 		    </div>

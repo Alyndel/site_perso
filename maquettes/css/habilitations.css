@@ -1,0 +1,105 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	height: 120px;
+}
+
+#titre, #profil
+{
+	float: left;
+	color: #575757;
+	font-size: 14px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#home
+{
+	height: 120px;
+	width: 120px;
+	float: left;
+}
+
+#deco
+{
+	background-color: #93C90E;
+	width: 100px;
+	height: 143px;
+	border-radius: 10px 10px 0px 10px;
+	float: right;
+}
+
+#profil
+{
+	float: right;
+	margin-right: 10px;
+}
+
+hr
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: rgba(104,129,151,0.25);
+}
+
+body
+{
+	margin: auto;
+	text-align: center;
+}
+
+.t_accueil
+{
+	margin: auto;
+	font-family: Ubuntu;
+	text-align: center;
+	color: #005EB8;
+}
+
+#t_habil
+{
+	margin: auto;
+	font-family: Ubuntu;
+	text-align: center;
+	color: #005EB8;
+}
+
+.souti
+{
+	float: left;
+}
+
+#tete_tableau
+{
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+th
+{
+	padding-left: 30px;
+	width: 100px;
+}
+td
+{
+	padding-left: 30px;
+	width: 100px;
+	padding-bottom: 10px;
+}
+
+.val
+{
+	color: #575757;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px 10px 0px 10px;
+	float: none;
+	background-color: rgba(104,129,151,0.25);
+}

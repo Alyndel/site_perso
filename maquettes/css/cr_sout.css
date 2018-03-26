@@ -1,0 +1,97 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	height: 120px;
+}
+
+#titre, #profil
+{
+	float: left;
+	color: #575757;
+	font-size: 14px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#home
+{
+	height: 120px;
+	width: 120px;
+	float: left;
+}
+
+#profil
+{
+	float: right;
+	margin-right: 10px;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25)
+}
+
+body
+{
+	margin: auto;
+	text-align: center;
+}
+
+.bouton
+{
+	width: 100px;
+}
+
+.cal
+{
+	float: left;
+	margin-left: 25px;
+}
+
+.cal td
+{
+	width: 30px;
+}
+
+#t_soutirage
+{
+	display: inline-block;
+	margin-right: 15%;
+	font-family: Ubuntu;
+	color: #005EB8;
+}
+
+#tete_tableau
+{
+	font-size: 20px;
+}
+
+#t_soutirage td
+{
+	width: 100px;
+	padding-top: 15px;
+}
+
+input
+{
+	color: #575757;
+	width: 50px;
+}
+
+.val
+{
+	color: #575757;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px 10px 0px 10px;
+	background-color: rgba(104,129,151,0.25);
+}

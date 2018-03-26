@@ -1,0 +1,49 @@
+#photo-profil
+{
+  width: 14.0625vw;
+  height: 25vw;
+  z-index: 1;
+  position: absolute;
+  margin-left: 35%;
+}
+
+#paragraphe
+{
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 50%;
+  width: 40%;
+}
+
+#accordion
+{
+  z-index: 2;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#paragraphe-centré
+{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#back-image
+{
+  width:100%;
+  height:100%;
+  position: fixed;
+  z-index: 0;
+}
+
+a
+{
+	color: whitesmoke;
+}

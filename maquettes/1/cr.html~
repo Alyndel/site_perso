@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<!-- Entête de paramètres, présent sur toutes les pages nécessitant un affichage -->
+	<head>
+	<title>Compte-rendu Soutirage</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css">
+	<link rel="shortcut icon" href="../images/enedis.ico">
+	<link href="../css/cr_sout.css" rel="stylesheet" type="text/css">
+	</head>
+<!-- Bandeau du site, présent sur toutes les pages -->
+	<header>
+	
+		<div id="logo">
+			<img src="../images/logo_enedis.png">
+		</div>
+		<div>
+			<a href="../accueil.html"><img src="../images/home.png" id="home" alt="" title="Retour à l'accueil"></a>
+		</div>
+		<div id="titre">
+			<h1>Compte-rendu</h1>
+		</div>
+		<div id="profil">
+			<form name="profil" >
+				<select size="1"  onChange="location = this.options[this.selectedIndex].value;">
+					<option value="#" >Christian THEIS</option>
+					<option value="../index.html" >Se déconnecter</option>
+				</select>
+			</form>
+		</div>
+		
+	</header>
+	<hr />
+	<body>
+		<form method="post" action="../accueil.html">
+			<script type="text/javascript" src="../js/calendrier.js"></script>
+			<table id="t_soutirage">
+				<th id="tete_tableau">Soutirage</th>
+				<th id="tete_tableau">Heure de début</th>
+				<th id="tete_tableau">Heure de fin</th>
+				<th id="tete_tableau">Cas attendus</th>
+				<th id="tete_tableau">Cas traités</th>
+				<tr>
+				<th>CU / AU</th>
+				
+				<td><input type="text" name="cu_au_hd" value="8h00" disabled="" /></td>
+				
+				<td><input type="text" name="cu_au_hf" value="10h00" disabled="" /></td>
+				
+				<td><input type="number" name="cu_au_att" value="6" disabled="true" /></td>
+				
+				<td><input type="number" name="cu_au_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>PRac Particulier</th>
+					<td><input type="text" name="prac_part_hd" value="10h00" disabled="" /></td>
+					
+					<td><input type="text" name="prac_part_hf" value="11h00" disabled="" /></td>
+					
+					<td><input type="number" name="prac_part_att" value="3" disabled="" /></td>
+					
+					<td><input type="number" name="prac_part_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>Accueil</th>
+					
+					<td><input type="text" name="accueil_hd" value="11h00" disabled="" /></td>
+					
+					<td><input type="text" name="accueil_hf" value="11h45" disabled="" /></td>
+					
+					<td><input type="number" name="acceuil_att" value="12" disabled="" /></td>
+					
+					<td><input type="number" name="accueil_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>Demande de raccordement</th>
+					
+					<td><input type="text" name="dem_racc_hd" value="12h45" disabled="" /></td>
+					
+					<td><input type="text" name="dem_racc_hf" value="14h45" disabled=""</td>
+					
+					<td><input type="number" name="dem_racc_att" value="4" disabled="" /></td>
+					
+					<td><input type="number" name="dem_racc_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>Traitement de mails</th>
+					
+					<td><input type="text" name="tdm_hd" value="14h45" disabled="" /></td>
+					
+					<td><input type="text" name="tdm_hf" value="16h00" disabled="" /></td>
+					
+					<td><input type="number" name="tdm_att" value="5" disabled="" /></td>
+					
+					<td><input type="number" name="tdm_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>Etude devis réalisés</th>
+					
+					<td><input type="text" name="edr_hd" value="16h00" disabled="" /></td>
+					
+					<td><input type="text" name="edr_hf" value="16h30" disabled="" /></td>
+					
+					<td><input type="number" name="edr_att" value="1" disabled="" /></td>
+					
+					<td><input type="number" name="edr_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>PRac Professionnel</th>
+					
+					<td><input type="text" name="prac_pro_hd" disabled="" /></td>
+					
+					<td><input type="text" name="prac_pro_hf" disabled="" /></td>
+					
+					<td><input type="number" name="prac_pro_att" disabled="" /></td>
+					
+					<td><input type="number" name="prac_pro_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>PRac Collectivités</th>
+					
+					<td><input type="text" name="prac_colloc_hd" disabled="" /></td>
+					
+					<td><input type="text" name="prac_colloc_hf" disabled="" /></td>
+					
+					<td><input type="number" name="prac_colloc_att" disabled="" /></td>
+					
+					<td><input type="number" name="prac_colloc_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>OSR Neuf</th>
+					
+					<td><input type="text" name="osr_neuf_hd" disabled="" /></td>
+					
+					<td><input type="text" name="osr_neuf_hd" disabled="" /></td>
+					
+					<td><input type="number" name="osr_neuf_att" disabled="" /></td>
+					
+					<td><input type="number" name="osr_neuf_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>SGE</th>
+					
+					<td><input type="text" name="sge_hd" disabled="" /></td>
+					
+					<td><input type="text" name="sge_hf" disabled="" /></td>
+					
+					<td><input type="number" name="sge_att" disabled="" /></td>
+					
+					<td><input type="number" name="sge_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>Modifications</th>
+					
+					<td><input type="text" name="modif_hd" disabled="" /></td>
+					
+					<td><input type="text" name="modif_hf" disabled="" /></td>
+					
+					<td><input type="number" name="modif_att" disabled="" /></td>
+					
+					<td><input type="number" name="modif_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>BP</th>
+					
+					<td><input type="text" name="bp_hd" disabled="" /></td>
+					
+					<td><input type="text" name="bp_hf" disabled="" /></td>
+					
+					<td><input type="number" name="bp_att" disabled="" /></td>
+					
+					<td><input type="number" name="bp_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>1ère MES</th>
+					
+					<td><input type="text" name="prem_mes_hd" disabled="" /></td>
+					
+					<td><input type="text" name="prem_mes_hf" disabled="" /></td>
+					
+					<td><input type="number" name="prem_mes_att" disabled="" /></td>
+					
+					<td><input type="number" name="prem_mes_rea" disabled="" /></td>
+				</tr>
+				<tr>
+					<td colspan="5"><textarea cols="50" rows="3">Zone de commentaires</textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="submit" class="val" value="Valider" /></td>
+				</tr>
+			</table>
+			
+		</form>
+	</body>
+</html>

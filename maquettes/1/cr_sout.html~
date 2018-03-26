@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<!-- Entête de paramètres, présent sur toutes les pages nécessitant un affichage -->
+	<head>
+	<title>Compte-rendu Soutirage</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css">
+	<link rel="shortcut icon" href="../images/enedis.ico">
+	<link href="../css/cr_sout.css" rel="stylesheet" type="text/css">
+	</head>
+<!-- Bandeau du site, présent sur toutes les pages -->
+	<header>
+	
+		<div id="logo">
+			<img src="../images/logo_enedis.png">
+		</div>
+		<div>
+			<a href="../accueil.html"><img src="../images/home.png" id="home" alt="" title="Retour à l'accueil"></a>
+		</div>
+		<div id="titre">
+			<h1>Compte-rendu Soutirage</h1>
+		</div>
+		<div id="profil">
+			<form name="profil" >
+				<select size="1"  onChange="location = this.options[this.selectedIndex].value;">
+					<option value="#" >Christian THEIS</option>
+					<option value="#" >Mon Profil</option>
+					<option value="../index.html" >Se déconnecter</option>
+				</select>
+			</form>
+		</div>
+		
+	</header>
+	<hr />
+	<body>
+		<form method="post" action="../accueil.html">
+			<script type="text/javascript" src="../js/calendrier.js"></script>
+			<table class="soutirage">
+				<th id="tete_tableau">Soutirage</th>
+				<th id="tete_tableau">Heures</th>
+				<th id="tete_tableau">Cas attendus</th>
+				<th id="tete_tableau">Cas traités</th>
+				<tr>
+				<th>CU / AU</th>
+				
+				<td><input type="text" name="cu_au_heure" value="2h00" disabled="" /></td>
+				
+				<td><input type="number" name="cu_au_att" value="6" disabled="true" /></td>
+				
+				<td><input type="number" name="cu_au_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>PRac Particulier</th>
+					<td><input type="text" name="prac_part_heure" value="1h00" disabled="" /></td>
+					
+					<td><input type="number" name="prac_part_att" value="4" disabled="" /></td>
+					
+					<td><input type="number" name="prac_part_rea" min="0" /></td>
+				</tr>
+				<tr>
+					<th>Accueil</th>
+					
+					<td><input type="text" name="accueil_heure" value="1h00" disabled="" /></td>
+					
+					<td><input type="number" name="acceuil_att" value="12" disabled="" /></td>
+					
+					<td><input type="number" name="accueil_rea" min="0" /></td>
+				</tr>
+				
+				<tr>
+					<th>PRac Professionnel</th>
+					
+					<td><input type="text" name="prac_pro_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="prac_pro_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="prac_pro_rea" value="0" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>PRac Collectivités</th>
+					
+					<td><input type="text" name="prac_colloc_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="prac_colloc_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="prac_colloc_rea" value="0" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>OSR Neuf</th>
+					
+					<td><input type="text" name="osr_neuf_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="osr_neuf_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="osr_neuf_rea" value="0" disabled="" /></td>
+				</tr>
+				
+				<tr>
+					<th>SGE</th>
+					
+					<td><input type="text" name="sge_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="sge_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="sge_rea" value="0" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>Modifications</th>
+					
+					<td><input type="text" name="modif_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="modif_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="modif_rea" value="0" disabled="" /></td>
+				</tr>
+				
+				<tr>
+					<th>BP</th>
+					
+					<td><input type="text" name="bp_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="bp_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="bp_rea" value="0" disabled="" /></td>
+				</tr>
+				<tr>
+					<th>1ère MES</th>
+					
+					<td><input type="text" name="prem_mes_heure" value="0h00" disabled="" /></td>
+					
+					<td><input type="number" name="prem_mes_att" value="0" disabled="" /></td>
+					
+					<td><input type="number" name="prem_mes_rea" value="0" disabled="" /></td>
+				</tr>
+				<tr>
+					<td colspan="4"><textarea cols="50" rows="3">Zone de commentaires</textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="submit" class="val" value="Valider" /></td>
+				</tr>
+			</table>
+			
+		</form>
+	</body>

@@ -1,0 +1,36 @@
+body
+{
+	font-family: ubuntu;
+	color: #005EB8;
+	font-size: 20px;
+}
+#general
+{
+	width: 800px;
+}
+#outil_agent, #outil_superviseur, #outil_chef_de_pole, #outil_administrateur
+{
+	width: 400px;
+	height: 175px;
+	text-align: center;
+	border: 2px solid #005EB8;
+	border-radius: 5px 5px 0 5px;
+	background-color: #93C90E;
+}
+
+button
+{
+	font-size: 18px;
+	border: 2px solid #98A4AE;
+	border-radius: 5px 5px 0 5px;
+	color: #005EB8;
+	height: 25px;
+}
+#outil_agent
+{
+	float: left;
+}
+#outil_chef_de_pole
+{
+	float: left;
+}

@@ -1,0 +1,87 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	height: 120px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#home
+{
+	height: 120px;
+	width: 120px;
+	float: left;
+	/*margin: 0;*/
+}
+
+#titre, #profil
+{
+	float: left;
+	color: #575757;
+	font-size: 14px;
+}
+
+#profil
+{
+	float: right;
+	margin-right: 10px;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25)
+}
+
+body
+{
+	margin: auto;
+	background-color: #FFFFFF;
+	font-family: Ubuntu;
+}
+
+table
+{
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#image
+{
+	height: 200px;
+	width: 200px;
+	border-radius: 20px 20px 0px 20px;
+}
+
+td
+{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#div_ronds
+{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 30px;
+}
+
+#div_ronds td
+{
+	width: 100px;
+}
+
+#rond
+{
+	width: 50px;
+	height: 50px;
+}

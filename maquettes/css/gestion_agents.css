@@ -1,0 +1,89 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	height: 120px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#home
+{
+	height: 120px;
+	width: 120px;
+	float: left;
+}
+
+#titre, #profil
+{
+	float: left;
+	color: #575757;
+	font-size: 14px;
+}
+
+#profil
+{
+	float: right;
+	margin-right: 10px;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25)
+}
+
+body
+{
+	margin: auto;
+	text-align: center;
+}
+#t_gestion_agents
+{
+	margin: auto;
+	margin-top: 10px;
+	font-family: Ubuntu;
+	text-align: center;
+	color: #005EB8;
+}
+
+#tete_tableau
+{
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+th
+{
+	background-color: rgba(225,6,0,0.25);
+}
+
+#t_gestion_agents td
+{
+	width: 150px;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+}
+
+#image
+{
+	height: 50px;
+	width: 38px;
+}
+
+.val
+{
+	color: #575757;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px 10px 0px 10px;
+	float: none;
+	background-color: rgba(104,129,151,0.25);
+}

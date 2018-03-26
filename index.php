@@ -13,6 +13,8 @@
 		Option SLAM (Solutions Logicielles et Applications Métiers)
 		<br><br>
 		👍 Développement Web
+		<br><br>
+		<a href="pdf/CV.pdf"><u>Le CV</u></a>
 	</p>
 </body>
 

@@ -1,0 +1,58 @@
+header
+{
+	background-color: rgba(104,129,151,0.25);
+	font-family: Ubuntu;
+	height: 120px;
+}
+
+#logo
+{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#home
+{
+	height: 120px;
+	width: 120px;
+	float: left;
+}
+
+#titre, #profil
+{
+	float: left;
+	color: #575757;
+	font-size: 14px;
+}
+
+#profil
+{
+	float: right;
+	margin-right: 10px;
+}
+
+hr
+{
+	margin-top: 0px;
+	color: rgba(104,129,151,0.25);
+}
+
+body
+{
+	margin: auto;
+	text-align: center;
+	font-family: Ubuntu;
+}
+
+.sep
+{
+	margin-bottom: 0px;
+}
+
+select
+{
+	margin-bottom: 20px;
+}

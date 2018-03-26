@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!-- Entête de paramètres, présent sur toutes les pages nécessitant un affichage -->
+	<head>
+	<title>Résultats</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css">
+	<link rel="shortcut icon" href="../images/enedis.ico">
+	<link href="../css/resultats.css" rel="stylesheet" type="text/css">
+	</head>
+<!-- Bandeau du site, qui sera présent sur toutes les pages -->
+	<header>
+	
+		<div>
+			<img src="../images/logo_enedis.png" id="logo">
+		</div>
+		<div>
+			<a href="../accueil.html"><img src="../images/home.png" id="home" alt="" title="Retour à l'accueil"></a>
+		</div>
+		<div id="titre">
+			<h1>Résultats</h1>
+		</div>
+		<div id="profil">
+			<form name="bouton_profil" >
+				<select name="profil" size="1"  onChange="location = this.options[this.selectedIndex].value;">
+					<option value="#" >Hugo NITARD</option>
+					<option value="../index.html" >Se déconnecter</option>
+				</select>
+			</form>
+		</div>
+	</header>
+	<hr />
+	<body>
+		<select onChange="location = this.options[this.selectedIndex].value;">
+			<option value="resu_moar.html" >MOAR</option>
+			<option value="resu_are.html" >ARE</option>
+		</select>
+		<select>
+			<option>AUBRY Sébastien</option>
+			<option>BEAUCHAMP Pierrick</option>
+			<option>CORNILLEAU Rémi</option>
+			<option>HAMOUNI Alexis</option>
+			<option>MAQUIN Clara</option>
+			<option>NOURI Sofia</option>
+			<option>THOMAS Aude</option>
+		</select>
+		<hr />
+		Du
+		<input type="date" name="date_debut" value="JJ/MM/AAAA" onfocus="this.value=''" />
+		Au
+		<input type="date" name="date_fin" value="JJ/MM/AAAA" onfocus="this.value=''" />
+		<hr class="sep" />
+		<input type="submit" name="envoi" value="Valider" />
+	</body>
+</html>

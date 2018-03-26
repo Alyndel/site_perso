@@ -42,3 +42,8 @@
   position: fixed;
   z-index: 0;
 }
+
+a
+{
+	color: grey;
+}

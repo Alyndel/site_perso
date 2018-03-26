@@ -1,0 +1,16 @@
+body
+{
+	margin: auto;
+	background-color: rgba(152,168,174,0.5);
+}
+table
+{
+	margin: auto;
+}
+img
+{
+	height: 150px;
+	width: 150px;
+	border-radius: 10px 10px 0px 10px;
+	margin-left: 20px;
+}
