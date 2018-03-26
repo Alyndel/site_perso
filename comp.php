@@ -17,23 +17,23 @@
 		      <div class="card-body">
 						Participation à un projet d’évolution d’un SI (solution applicative et d’infrastructure portant prioritairement sur le domaine de spécialité du candidat)
 						<br>
-		        A1.1.1 , Analyse du cahier des charges d'un service à produire
+		        		Maîtrise , A1.1.1 , Analyse du cahier des charges d'un service à produire
 						<br>
-						A1.2.5 , Définition des niveaux d'habilitation associés à un service
+						Pratique , A1.2.5 , Définition des niveaux d'habilitation associés à un service
 						<br>
-						A1.3.4 , Déploiement d'un service
+						Pratique , A1.3.4 , Déploiement d'un service
 						<br>
-						A2.2.1 , Suivi et résolution d'incidents
+						Pratique , A2.2.1 , Suivi et résolution d'incidents
 						<br>
-						A2.3.2 , Proposition d'amélioration d'un service
+						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
-						A3.2.2 , Remplacement ou mise à jour d'éléments défectueux ou obsolètes
+						Pratique , A3.2.2 , Remplacement ou mise à jour d'éléments défectueux ou obsolètes
 						<br>
-						A4.1.1 , Proposition d'une solution applicative
+						Pratique , A4.1.1 , Proposition d'une solution applicative
 						<br>
-						A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
+						Pratique , A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
 						<br>
-						A4.1.3 , Conception ou adaptation d'une base de données
+						Maîtrise , A4.1.3 , Conception ou adaptation d'une base de données
 		      </div>
 		    </div>
 		  </div>
@@ -52,11 +52,11 @@
 						<br>
 						Elaboration de documents relatifs à la production et à la fourniture de services
 						<br>
-						A1.1.1 , Analyse du cahier des charges d'un service à produire
+						Maîtrise , A1.1.1 , Analyse du cahier des charges d'un service à produire
 						<br>
-						A1.1.3 , Étude des exigences liées à la qualité attendue d'un service
+						Pratique , A1.1.3 , Étude des exigences liées à la qualité attendue d'un service
 						<br>
-						A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
+						Pratique , A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
 		      </div>
 		    </div>
 		  </div>
@@ -71,17 +71,17 @@
 		    </div>
 		    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 		      <div class="card-body">
-		        A1.3.1 , Test d'intégration et d'acceptation d'un service
+		        		Vu , A1.3.1 , Test d'intégration et d'acceptation d'un service
 						<br>
-						A1.3.4 , Déploiement d'un service
+						Pratique , A1.3.4 , Déploiement d'un service
 						<br>
-						A1.4.1 , Participation à un projet
+						Pratique , A1.4.1 , Participation à un projet
 						<br>
-						A1.4.3 , Gestion des ressources
+						Pratique , A1.4.3 , Gestion des ressources
 						<br>
-						A2.3.2 , Proposition d'amélioration d'un service
+						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
-						A4.1.9 , Rédaction d'une documentation technique
+						Pratique , A4.1.9 , Rédaction d'une documentation technique
 		      </div>
 		    </div>
 		  </div>
@@ -98,7 +98,7 @@
 		      <div class="card-body">
 						Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode
 						<br>
-						A5.2.2 , Veille technologique
+						Maîtrise , A5.2.2 , Veille technologique
 		      </div>
 		    </div>
 		  </div>
@@ -115,7 +115,7 @@
 		      <div class="card-body">
 						Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode
 						<br>
-						A5.2.4 , Étude d˜une technologie, d'un composant, d'un outil ou d'une méthode
+						Maîtrise , A5.2.4 , Étude d'une technologie, d'un composant, d'un outil ou d'une méthode
 		      </div>
 		    </div>
 		  </div>
@@ -130,13 +130,13 @@
 		    </div>
 		    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
 		      <div class="card-body">
-		        A1.1.1 , Analyse du cahier des charges d'un service à produire
+		        		Pratique , A1.1.1 , Analyse du cahier des charges d'un service à produire
 						<br>
-						A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
+						Maîtrise , A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
 						<br>
-						A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
+						Pratique , A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
 						<br>
-						A1.2.2 , Rédaction des spécifications techniques de la solution retenue
+						Pratique , A1.2.2 , Rédaction des spécifications techniques de la solution retenue
 		      </div>
 		    </div>
 		  </div>
@@ -151,15 +151,15 @@
 		    </div>
 		    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
 		      <div class="card-body">
-		        A1.2.5 , Définition des niveaux d'habilitation associés à un service
+		        		Pratique , A1.2.5 , Définition des niveaux d'habilitation associés à un service
 						<br>
-						A3.1.1 , Proposition d'une solution d'infrastructure
+						Maîtrise , A3.1.1 , Proposition d'une solution d'infrastructure
 						<br>
-						A3.1.2 , Maquettage et prototypage d'une solution d'infrastructure
+						Maîtrise , A3.1.2 , Maquettage et prototypage d'une solution d'infrastructure
 						<br>
-						A3.1.3 , Prise en compte du niveau de sécurité nécessaire
+						Pratique , A3.1.3 , Prise en compte du niveau de sécurité nécessaire
 						<br>
-						A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
+						Pratique , A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
 		      </div>
 		    </div>
 		  </div>
@@ -176,11 +176,11 @@
 		      <div class="card-body">
 						Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode
 						<br>
-						A5.2.1 , Exploitation des référentiels, normes et standards adoptés par le prestataire
+						Pratique , A5.2.1 , Exploitation des référentiels, normes et standards adoptés par le prestataire
 						<br>
-						A5.2.2 , Veille technologique
+						Maîtrise , A5.2.2 , Veille technologique
 						<br>
-						A5.2.4 , Étude d˜une technologie, d'un composant, d'un outil ou d'une méthode
+						Pratique , A5.2.4 , Étude d'une technologie, d'un composant, d'un outil ou d'une méthode
 		      </div>
 		    </div>
 		  </div>
@@ -201,13 +201,13 @@
 						<br>
 						Elaboration de documents relatifs à la production et à la fourniture de services
 						<br>
-						A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
+						Pratique , A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
 						<br>
-						A1.3.1 , Test d'intégration et d'acceptation d'un service
+						Pratique , A1.3.1 , Test d'intégration et d'acceptation d'un service
 						<br>
-						A2.3.2 , Proposition d'amélioration d'un service
+						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
-						A4.1.3 , Conception ou adaptation d'une base de données
+						Maîtrise , A4.1.3 , Conception ou adaptation d'une base de données
 		      </div>
 		    </div>
 		  </div>
@@ -222,21 +222,21 @@
 		    </div>
 		    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
 		      <div class="card-body">
-		        A1.1.1 , Analyse du cahier des charges d'un service à produire
+		        		Pratique , A1.1.1 , Analyse du cahier des charges d'un service à produire
 						<br>
-						A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
+						Pratique , A1.1.2 , Étude de l'impact de l'intégration d'un service sur le système informatique
 						<br>
-						A1.2.5 , Définition des niveaux d'habilitation associés à un service
+						Pratique , A1.2.5 , Définition des niveaux d'habilitation associés à un service
 						<br>
-						A1.3.2 , Définition des éléments nécessaires à la continuité d'un service
+						Pratique , A1.3.2 , Définition des éléments nécessaires à la continuité d'un service
 						<br>
-						A1.4.1 , Participation à un projet
+						Expertise , A1.4.1 , Participation à un projet
 						<br>
-						A1.4.3 , Gestion des ressources
+						Pratique , A1.4.3 , Gestion des ressources
 						<br>
-						A2.3.2 , Proposition d'amélioration d'un service
+						Pratique , A2.3.2 , Proposition d'amélioration d'un service
 						<br>
-						A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
+						Maîtrise , A4.1.2 , Conception ou adaptation de l'interface utilisateur d'une solution applicative
 		      </div>
 		    </div>
 		  </div>
