@@ -59,6 +59,8 @@
 						Pratique , A1.1.3 , Étude des exigences liées à la qualité attendue d'un service
 						<br>
 						Pratique , A1.2.1 , Élaboration et présentation d'un dossier de choix de solution technique
+						<br>
+						<a href="pdf/cdcf_hocquigny_nitard.pdf"><u>Lien vers le cahier des charges fonctionnelles</u></a>
 		      </div>
 		    </div>
 		  </div>
