@@ -1,0 +1,11 @@
+= simple_form_for(@type_duree) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :libelle, label: "Libellé : "
+
+  .form-actions
+    = button_tag class: "btn btn-outline-primary"
+      i.fa.fa-floppy-o
+      '&nbsp;Enregistrer
+    / = f.button :submit

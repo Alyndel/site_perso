@@ -1,0 +1,13 @@
+= simple_form_for(@document) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :libelle, label: "Libellé : "
+    = f.input :document, label: "Ajouter un document", as: :file
+    = f.input :ordre, label: "N° ordre : "
+    = f.input :formation_id, label: "Formation : "
+
+  .form-actions
+	= button_tag class: "btn btn-outline-primary"
+		i.fa.fa-floppy-o
+		'&nbsp;Enregistrer

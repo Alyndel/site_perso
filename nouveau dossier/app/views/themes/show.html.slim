@@ -1,0 +1,19 @@
+.card
+	.card-header 
+		'Thème
+	.card-block
+		br
+		p
+		  strong Libellé : 
+		  = @theme.libelle
+
+		p
+			strong Code : 
+			= @theme.code
+
+		p
+			strong Contenu : 
+			= @theme.contenu
+br
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifer", edit_theme_path(@theme), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", themes_path, class: "btn btn-outline-info blanc"

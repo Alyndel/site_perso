@@ -1,0 +1,2 @@
+module TypesFormationHelper
+end

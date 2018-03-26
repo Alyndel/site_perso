@@ -1,0 +1,33 @@
+h1 Listing sessions_formation
+
+table
+  thead
+    tr
+      th Description
+      th Date debut
+      th Heure debut
+      th Date fin
+      th Heure fin
+      th Statut
+      th Presence
+      th
+      th
+      th
+
+  tbody
+    - @sessions_formation.each do |session_formation|
+      tr
+        td = session_formation.description
+        td = session_formation.date_debut
+        td = session_formation.heure_debut
+        td = session_formation.date_fin
+        td = session_formation.heure_fin
+        td = session_formation.statut
+        td = session_formation.presence
+        td = link_to 'Show', session_formation
+        td = link_to 'Edit', edit_session_formation_path(session_formation)
+        td = link_to 'Destroy', session_formation, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Session formation', new_session_formation_path

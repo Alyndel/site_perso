@@ -1,0 +1,23 @@
+h1 Listing groupes_de_sessions
+
+table
+  thead
+    tr
+      th Libelle
+      th Formation
+      th
+      th
+      th
+
+  tbody
+    - @groupes_de_sessions.each do |groupe_de_sessions|
+      tr
+        td = groupe_de_sessions.libelle
+        td = groupe_de_sessions.formation_id
+        td = link_to 'Show', groupe_de_sessions
+        td = link_to 'Edit', edit_groupe_de_sessions_path(groupe_de_sessions)
+        td = link_to 'Destroy', groupe_de_sessions, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Groupe de sessions', new_groupe_de_sessions_path

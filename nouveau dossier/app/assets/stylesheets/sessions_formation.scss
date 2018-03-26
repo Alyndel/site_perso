@@ -1,0 +1,7 @@
+// Place all the styles related to the sessions_formation controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$ ->
+  console.log 'coucou'
+  $("div.seances").each (index) ->
+    $('form a.add_nested_fields').on 'click', nestedFormEvents.addFields

@@ -1,0 +1,37 @@
+= javascript_include_tag 'recherche.js'
+= javascript_include_tag 'jquery.dataTables.min.js'
+
+p#notice = notice
+
+p
+  strong Code :
+  = @groupe.code
+p
+  strong Libellé :
+  = @groupe.libelle
+p
+  strong Type :
+  = @groupe.type_groupe
+
+p
+	strong Liste des utilisateurs :
+	table#tableau.table.table-condensed.table-striped
+		thead
+			tr
+				th IdRES
+				th Nom
+				th Prénom
+				th
+
+		tbody
+			- @groupe.utilisateurs.each do |utilisateur|
+				tr#ligne
+					td = utilisateur.idres
+					td = utilisateur.nom_usage
+					td = utilisateur.prenom_usage
+					td = link_to content_tag(:i, nil, class: "fa fa-eye"), utilisateur, class: "btn btn-outline-default"
+
+br
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_groupe_path(@groupe), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", groupes_path, class: "btn btn-outline-info blanc"

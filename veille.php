@@ -1,10 +1,10 @@
 <?php
 	include 'header.php';
  ?>
-
-		<h1>Les logiciels de versionning</h1>
-
-			Interrogez-moi svp
+		
+		
+		<object data="pdf/veille.pdf" type="application/pdf" id="o_pdf">
+		<!-- <a href="pdf/veille.pdf"><u>Lien sur la veille</u></a> -->
 	</body>
 
 </html>

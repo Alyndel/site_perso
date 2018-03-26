@@ -1,0 +1,34 @@
+= simple_form_for(@batiment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .container-fluid
+      .row
+        .col-sm
+          .card
+            .card-header Généralités : 
+            .card-block
+              = f.input :nom, label: "Nom : "
+              = f.input :localisation, label: "Localisation : "
+              = f.input :etablissement_id, label: "Etablissement : "
+        .col-sm
+          .card
+            .card-header Adresse :
+            .card-block
+              = f.input :rue, label: "Rue : "
+              = f.input :code_postal, label: "Code postal : "
+              = f.input :ville, label: "Ville : "
+    br
+    .container-fluid 
+      .row
+        .col-sm
+          .card
+            .card-body
+              = f.input :image, label: "Image : ", as: :file
+              = f.input :plan, label: "Plan : ", as: :file
+
+  .form-actions
+    = button_tag class: "btn btn-outline-primary"
+      i.fa.fa-floppy-o
+      '&nbsp;Enregistrer
+    / = f.button :submit

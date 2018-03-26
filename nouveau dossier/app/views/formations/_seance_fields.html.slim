@@ -1,0 +1,6 @@
+.form-inline.seances
+	= f.input :libelle, label: "Libellé : "
+	'&nbsp;
+	= f.input :duree, label: "Durée : "
+	'&nbsp;
+	= f.link_to_remove content_tag(:i, nil, class: "fa fa-trash-o mr-1") + "Supprimer cette séance", class: "btn btn-outline-danger"

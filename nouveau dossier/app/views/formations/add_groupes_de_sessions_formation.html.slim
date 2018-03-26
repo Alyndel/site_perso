@@ -1,0 +1,14 @@
+= simple_nested_form_for(@formation) do |f|
+  = f.error_notification
+
+  = text_field_tag :formation_seance_ids, nil, placeholder: @formation.seances.count, type: "hidden"
+
+  / = f.fields_for :sessions_formation, 3.times { @formation.sessions_formation.build}
+  / = f.link_to_add content_tag(:i, nil, class:'fa fa-plus mr-1')+'Ajouter une session de formation', :sessions_formation, class: "btn btn-outline-success seance"
+  
+
+  br
+  .form-actions
+    = button_tag class: "btn btn-outline-primary"
+      i.fa.fa-floppy-o
+      '&nbsp;Enregistrer

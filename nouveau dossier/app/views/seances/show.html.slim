@@ -1,0 +1,14 @@
+p#notice = notice
+
+p
+  strong Libellé :
+  = @seance.libelle
+p
+  strong Durée :
+  = @seance.duree
+p
+  strong Formation :
+  = @seance.formation_id
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_seance_path(@seance), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", seances_path, class: "btn btn-outline-info blanc"

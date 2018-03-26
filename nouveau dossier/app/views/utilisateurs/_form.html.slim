@@ -1,0 +1,16 @@
+= simple_form_for(@utilisateur) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :idres, label: "IdRES : "
+    = f.input :nom_usage, label: "Nom d'usage : "
+    = f.input :prenom_usage, label: "Prénom : "
+    = f.input :date_naissance, label: "Date de naissance : "
+    = f.input :date_entree, label: "Date d'entrée au CHU : "
+    = f.input :date_sortie, label: "Date de sortie du CHU : "
+
+  .form-actions
+  	= button_tag class: "btn btn-outline-primary"
+    	i.fa.fa-floppy-o
+    	'&nbsp;Enregistrer
+    / = f.button :submit

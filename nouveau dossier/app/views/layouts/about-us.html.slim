@@ -1,0 +1,248 @@
+== render 'layouts/header'
+section.main-container.padding-bottom-clear
+  .container
+    .row
+      .main.col-md-12
+        h3.title = @objet.titre
+        .separator-2
+        .row
+          .col-md-6
+            == @objet.texte
+            / p
+
+            /   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus illo vero cupiditate, sed enim voluptatibus provident consectetur. Quo dolor sunt nostrum, eligendi illo accusamus odit, ipsam excepturi voluptatem nulla minus.
+            / p
+            /   | Blanditiis aspernatur, non quasi, maxime corporis officiis quia. Cupiditate, voluptatibus ducimus, natus, labore mollitia dolorem incidunt voluptatum, delectus eius fugit porro placeat animi voluptatem autem hic eligendi sint. Amet pariatur odit repudiandae sunt. Rem ipsum dolor sit amet, consectetur adipisicing elit. Sunt asperiores a.
+            / ul.list-icons
+            /   li
+            /     i.icon-check-1
+            /     |  We are here to support you
+            /   li
+            /     i.icon-check-1
+            /     |  Free updates
+            /   li
+            /     i.icon-check-1
+            /     |  Unlimited options and variations
+            /   li
+            /     i.icon-check-1
+            /     |  ipsam asperiores fugiat quo
+          .col-md-6
+            .owl-carousel.content-slider-with-controls
+              .overlay-container.overlay-visible
+                img src="images/page-about-1.jpg" alt=""
+                .overlay-bottom.hidden-xs
+                  .text
+                    h3.title
+                      | We Can Do It
+                a.popup-img.overlay-link href="images/page-about-1.jpg" title="image title"
+                  i.icon-plus-1
+              .overlay-container.overlay-visible
+                img src="images/page-about-2.jpg" alt=""
+                .overlay-bottom.hidden-xs
+                  .text
+                    h3.title
+                      | You Can Trust Us
+                a.popup-img.overlay-link href="images/page-about-2.jpg" title="image title"
+                  i.icon-plus-1
+              .overlay-container.overlay-visible
+                img src="images/page-about-3.jpg" alt=""
+                .overlay-bottom.hidden-xs
+                  .text
+                    h3.title
+                      | We Love What We Do
+                a.popup-img.overlay-link href="images/page-about-3.jpg" title="image title"
+                  i.icon-plus-1
+  .light-gray-bg.pv-20.section.mt-20
+    .container
+      h4.mb-20
+        | Our
+        strong
+          | Team
+      .row.grid-space-10
+        .col-sm-6.col-md-3
+          .image-box.team-member.style-2.shadow.bordered.mb-20.text-center
+            .overlay-container.overlay-visible
+              img src="images/team-member-1.jpg" alt=""
+              .overlay-bottom
+                p.small.margin-clear
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+            .body
+              h3.margin-clear
+                | Jane Doe
+              small
+                | CEO
+              .separator.mt-10
+              ul.social-links.circle.colored.margin-clear
+                li.skype
+                  a target="_blank" href="http://www.skype.com"
+                    i.fa.fa-skype
+                li.linkedin
+                  a target="_blank" href="http://www.linkedin.com"
+                    i.fa.fa-linkedin
+                li.xing
+                  a target="_blank" href="https://www.xing.com/"
+                    i.fa.fa-xing
+        .col-sm-6.col-md-3
+          .image-box.team-member.style-2.shadow.bordered.mb-20.text-center
+            .overlay-container.overlay-visible
+              img src="images/team-member-2.jpg" alt=""
+              .overlay-bottom
+                p.small.margin-clear
+                  | Ipsum dolor sit amet, consectetur adipisicing elit!
+            .body
+              h3.margin-clear
+                | John Doe
+              small
+                | CTO
+              .separator.mt-10
+              ul.social-links.circle.colored.margin-clear
+                li.skype
+                  a target="_blank" href="http://www.skype.com"
+                    i.fa.fa-skype
+                li.linkedin
+                  a target="_blank" href="http://www.linkedin.com"
+                    i.fa.fa-linkedin
+                li.xing
+                  a target="_blank" href="https://www.xing.com/"
+                    i.fa.fa-xing
+        .col-sm-6.col-md-3
+          .image-box.team-member.style-2.shadow.bordered.mb-20.text-center
+            .overlay-container.overlay-visible
+              img src="images/team-member-3.jpg" alt=""
+              .overlay-bottom
+                p.small.margin-clear
+                  | Dolor sit amet, praesentium consectetur adipisicing elit!
+            .body
+              h3.margin-clear
+                | Anne Doe
+              small
+                | Project Manager
+              .separator.mt-10
+              ul.social-links.circle.colored.margin-clear
+                li.skype
+                  a target="_blank" href="http://www.skype.com"
+                    i.fa.fa-skype
+                li.linkedin
+                  a target="_blank" href="http://www.linkedin.com"
+                    i.fa.fa-linkedin
+                li.xing
+                  a target="_blank" href="https://www.xing.com/"
+                    i.fa.fa-xing
+        .col-sm-6.col-md-3
+          .image-box.team-member.style-2.shadow.bordered.mb-20.text-center
+            .overlay-container.overlay-visible
+              img src="images/team-member-4.jpg" alt=""
+              .overlay-bottom
+                p.small.margin-clear
+                  | Voluptates praesentium nulla cupiditate explicabo!
+            .body
+              h3.margin-clear
+                | Maria Doe
+              small
+                | Designer
+              .separator.mt-10
+              ul.social-links.circle.colored.margin-clear
+                li.skype
+                  a target="_blank" href="http://www.skype.com"
+                    i.fa.fa-skype
+                li.linkedin
+                  a target="_blank" href="http://www.linkedin.com"
+                    i.fa.fa-linkedin
+                li.xing
+                  a target="_blank" href="https://www.xing.com/"
+                    i.fa.fa-xing
+  .section
+    .container
+      h3
+        | Why
+        strong
+          | Choose Us
+      .separator-2
+      .row
+        .col-md-6
+          #accordion.panel-group.collapse-style-1
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                    i.fa.fa-rocket.pr-10
+                    | We Have Strong Background
+              #collapseOne.panel-collapse.collapse.in
+                .panel-body
+                  |  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put.
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.collapsed data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                    i.fa.fa-leaf.pr-10
+                    | We Will Always Here To Support You
+              #collapseTwo.panel-collapse.collapse
+                .panel-body
+                  |  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put.
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.collapsed data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                    i.fa.fa-heart.pr-10
+                    | We Love What We Do
+              #collapseThree.panel-collapse.collapse
+                .panel-body
+                  |  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put.
+        .col-md-6
+          .progress.mt-20.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="90%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | CSS
+          .progress.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="95%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | HTML5
+          .progress.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="80%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | JQUERY
+          .progress.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="85%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | PHP
+          .progress.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="75%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | PHOTOSHOP
+          .progress.style-1
+            span.text
+            .progress-bar.progress-bar-default data-animate-width="90%"
+              span.label.object-non-visible data-animation-effect="fadeInLeftSmall" data-effect-delay="1000"
+                | DRUPAL
+      .separator
+      .clients-container
+        .clients
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="100"
+            a href="#"
+              img src="images/client-1.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="200"
+            a href="#"
+              img src="images/client-2.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="300"
+            a href="#"
+              img src="images/client-3.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="400"
+            a href="#"
+              img src="images/client-4.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="500"
+            a href="#"
+              img src="images/client-5.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="600"
+            a href="#"
+              img src="images/client-6.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="700"
+            a href="#"
+              img src="images/client-7.png" alt=""
+          .client-image.object-non-visible data-animation-effect="fadeIn" data-effect-delay="800"
+            a href="#"
+              img src="images/client-8.png" alt="" == render 'layouts/footer'

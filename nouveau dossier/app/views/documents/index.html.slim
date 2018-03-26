@@ -1,0 +1,27 @@
+h1 Liste des documents
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th Document
+      th Ordre
+      th formation_id
+      th
+      th
+      th
+
+  tbody
+    - @documents.each do |document|
+      tr
+        td = document.libelle
+        td = document.document
+        td = document.ordre
+        td = document.formation_id
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), document, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_document_path(document), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), document, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau document", new_document_path, class: "btn btn-outline-primary blanc"

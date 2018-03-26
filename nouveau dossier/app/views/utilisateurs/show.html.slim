@@ -1,0 +1,35 @@
+p#notice = notice
+
+p
+  strong Idres:
+  = @utilisateur.idres
+p
+  strong Nom d'usage :
+  = @utilisateur.nom_usage
+p
+  strong Prénom :
+  = @utilisateur.prenom_usage
+p
+  strong Date de naissance :
+  = @utilisateur.date_naissance
+p
+  strong Date d'entrée au CHU :
+  = @utilisateur.date_entree
+p
+  strong Date de sortie au CHU :
+  = @utilisateur.date_sortie
+p
+  strong Matricule(s) :
+  - @utilisateur.matricules.each do |matricule|
+    br
+    = matricule.libelle
+
+p
+  strong Groupes:
+  - @utilisateur.groupes.each do |groupe|
+    br
+    = groupe.code + " " + groupe.libelle + " | "
+    = link_to 'Infos', groupe
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_utilisateur_path(@utilisateur), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", utilisateurs_path, class: "btn btn-outline-info blanc"

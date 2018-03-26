@@ -1,0 +1,27 @@
+- if @ariane
+  .breadcrumb-container
+    .container
+      ol.breadcrumb
+        li
+          i.fa.fa-home.pr-10
+          a href="/"
+            | Accueil
+        - @ariane[0..-2].each do |a|
+          - unless a.is_a? Array
+            li = lien_menu a
+          - else
+            li
+              a href="#{a[1]}"
+                = a[0]+" "
+        li.active
+          == @ariane.last[0]
+
+        - if @objet.try(:updated_at)
+          li.pull-right
+            / | Page créée le&nbsp;
+            / = @objet.created_at.try :strftime, "%d/%m/%Y à %H:%M:%S"
+            / | ,&nbsp;
+            | mise à jour le&nbsp;
+            = @objet.updated_at.try :strftime, "%d/%m/%Y à %H:%M:%S"
+          li.pull-right
+            = vues(@objet)

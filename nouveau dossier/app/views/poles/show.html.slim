@@ -1,0 +1,11 @@
+p#notice = notice
+
+p
+  strong Code :
+  = @pole.code
+p
+  strong Libellé :
+  = @pole.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_pole_path(@pole), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", poles_path, class: "btn btn-outline-info blanc"

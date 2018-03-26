@@ -1,0 +1,11 @@
+p#notice = notice
+
+p
+  strong Code :
+  = @etablissement.code
+p
+  strong Libellé :
+  = @etablissement.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_etablissement_path(@etablissement), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", etablissements_path, class: "btn btn-outline-info blanc"

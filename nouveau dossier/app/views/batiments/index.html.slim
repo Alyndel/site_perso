@@ -1,0 +1,35 @@
+h1 Liste des bâtiments
+
+table.table
+  thead
+    tr
+      th Nom
+      th Localisation
+      / th Rue
+      / th Code postal
+      / th Ville
+      / th Plan
+      / th Image
+      th Etablissement
+      th
+      th
+      th
+
+  tbody
+    - @batiments.each do |batiment|
+      tr
+        td = batiment.nom
+        td = batiment.localisation
+        / td = batiment.rue
+        / td = batiment.code_postal
+        / td = batiment.ville
+        / td = batiment.plan
+        / td = batiment.image
+        td = batiment.etablissement_id
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), batiment, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_batiment_path(batiment), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), batiment, class: "btn btn-outline-default", data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Ajouter un bâtiment", new_batiment_path, class: "btn btn-outline-primary blanc"

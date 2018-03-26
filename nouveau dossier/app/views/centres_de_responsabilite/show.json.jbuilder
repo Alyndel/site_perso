@@ -1,0 +1,1 @@
+json.partial! "centres_de_responsabilite/centre_de_responsabilite", centre_de_responsabilite: @centre_de_responsabilite

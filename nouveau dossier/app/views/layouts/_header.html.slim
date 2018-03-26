@@ -1,0 +1,169 @@
+doctype html
+html lang="fr" xmlns:og="http://ogp.me/ns#"
+  head
+    meta charset="utf-8"
+    - if defined?(@contenu) and @contenu.present?
+      title
+        = @contenu.titre||'' + " - CHU de Reims"
+      meta name="description" content="#{@contenu.description}"
+    - else
+      title
+        | Portail de formation
+      meta name="description" content="Centre Hospitalier Universitaire de Reims"
+
+    meta name="author" content="htmlcoder.me"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png"
+    link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"
+    link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"
+    link rel="manifest" href="/manifest.json"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"
+    meta name="theme-color" content="#ffffff"
+    / Pour les réseaux sociaux
+    link rel="canonical" href="#{request.original_url}"
+    meta content="website" property="og:type"
+    meta property="og:site_name" content="CHU de REIMS"
+
+    - if defined?(@contenu) and @contenu.present?
+      meta property='og:url' content='#{request.original_url}'
+      meta property="og:title" content="#{@contenu.titre}"
+      meta property="og:image" content="#{request.base_url.to_s+@contenu.photo.to_s}"
+      meta property='og:description' content='#{@contenu.reference.description_partage}'
+      meta name="keywords" content="#{@contenu.tag_list.join(', ')}"
+
+    meta name="author" content="CHU de Reims"
+
+    = stylesheet_pack_tag "application", media: "all", 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag "app"
+    / = stylesheet_link_tag "print", media: "print"
+
+  body.no-trans.transparent-header data-turbolinks="#{!(User.current_user.present?)}"
+    .page-wrapper
+      .header-container
+        - classes = ((Rails.env == "production" and ((Rails.application.config.action_controller.asset_host =~ /^https:\/\/www-preprod\./) != nil)) ? "colored bandeau_preprod" : "colored")
+        .header-top class="#{classes}"
+          .container
+            .row
+              / .col-xs-10.col-sm-7
+              /   #header-top-second.clearfix.text-right
+              /     nav
+              /       ul.social-links.circle.small.clearfix.hidden-xs
+              /         - ip = request.env['HTTP_X_CLIENTIP_DMZ']||request.env['HTTP_X_CLIENTIP']||request.remote_ip
+              /         - if (ip =~ /^10\./) != nil
+              /           - if User.current_user
+              /             li.separateur
+              /             - m = Medecin.valide.where(id_res: User.current_user.id_res).first
+              /             - m = Medecin.where(id_res: User.current_user.id_res).first unless m
+              /             - if m.present?
+              /               li data-no-turbolink=""
+              /                 = link_to content_tag(:i, ' ', class:"fa fa-user-md"), medecin_path(m), class: "link-light", title: "Voir votre fiche "+User.current_user.nom_complet
+              /             li data-no-turbolink=""
+              /              = link_to content_tag(:i, ' ', class:"fa fa-sign-out"), logout_path, class: "link-light", title: "Déconnecter "+User.current_user.nom_complet
+              /           - else
+              /             li data-no-turbolink=""
+              /               = link_to content_tag(:i, ' ', class:"fa fa-sign-in"), login_path, class: "link-light", title:"Se connecter"
+
+        = render "layouts/flash"
+        header.header.fixed.clearfix
+          .container
+            .row
+              .col-md-1
+                .header-left.clearfix
+                  .header-dropdown-buttons.visible-xs
+                    .btn-group.dropdown
+                      /button.btn-top-left.btn.dropdown-toggle#focus-ios type="button" onclick='toggle(this); $("#recherche-mobile").focus()'
+                        i.fa.fa-search
+                      | &nbsp;&nbsp;
+                      = render partial:"layouts/acces_rapide"
+                      ul.dropdown-menu.dropdown-menu-right.dropdown-animation
+                        li
+                          form.search-box.margin-clear role="search" action="/recherche" method="get"
+                            .form-group.has-feedback
+                              input#recherche-mobile.form-control type="text" placeholder="Chercher" name="mots_clefs" autofocus="autofocus"
+                              i.icon-search.form-control-feedback onclick="this.parentNode.parentNode.submit()"
+              .col-md-11#navigation
+                .header-right.clearfix
+                  .main-navigation.animated.with-dropdown-buttons
+                    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                      a.navbar-brand href="#"  Portail de formation
+                      button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
+                        span.navbar-toggler-icon
+                      #navbarSupportedContent.collapse.navbar-collapse
+                        ul.navbar-nav.mr-auto
+                          li.nav-item
+                            = link_to content_tag(:i, ' ', class: 'fa fa-home') + " Accueil", accueil_path, class: 'nav-link'
+                            span.sr-only (current)
+                          li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                              | Les formations
+                            .dropdown-menu aria-labelledby="navbarDropdown"
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-search mr-1") + "Catalogue des formations", formations_path
+                              .dropdown-divider
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-graduation-cap mr-1") + "Les thèmes de formation", themes_path
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-list mr-1") + "Les types de formation", types_formation_path
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-hourglass mr-1") + "Les types de durée", types_duree_path
+                          li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                              | Les structures
+                            .dropdown-menu aria-labelledby="navbarDropdown"
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-hospital mr-1") + "Etablissements du G.H.T.", etablissements_ght_path
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-building mr-1") + "Etablissements", etablissements_path
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-globe mr-1") + "Pôles", poles_path
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-sitemap mr-1") + "Centres de responsabilité", centres_de_responsabilite_path
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-h-square mr-1") + "Unités fonctionnelles", unites_fonctionnelles_path
+                              .dropdown-divider
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-users mr-1") + "Les groupes", groupes_path
+                              .dropdown-item = link_to content_tag(:i,  nil, class: "fa fa-user mr-1") + "Les agents", utilisateurs_path
+                          li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                              | Administration
+                            .dropdown-menu aria-labelledby="navbarDropdown"
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-id-card mr-1") + "#Gestion des rôles", accueil_path
+                              .dropdown-item = link_to content_tag(:i, nil, class: "fa fa-lock mr-1") + "#Gestion des autorisations", accueil_path
+                              .dropdown-divider
+                              .dropdown-item = link_to link_to content_tag(:i,  nil, class:"fa fa-building mr-1") + "Gestion des bâtiments", batiments_path
+                              .dropdown-item = link_to content_tag(:i, nil, class:"fa fa-map-marker mr-1") + "Gestion des salles", salles_path
+                          li.nav-item
+                            - if (current_user == nil)
+                              = link_to content_tag(:i, nil, class: 'fa fa-sign-in') + " Se connecter", login_path, class: 'nav-link'
+                            - else
+                              = link_to content_tag(:i, nil, class: 'fa fa-sign-out') + " Se déconnecter", logout_path, class: 'nav-link'
+
+                          .header-dropdown-buttons.hidden-xs
+                            .btn-group.dropdown
+                              button#bouton-top-recherche.btn-top-left.btn.dropdown-toggle.hover-couleur-b actif="0" onclick='toggle(this); $("#search_input").focus()'
+                                i.fa.fa-search style="color: #777777"
+                              ul.dropdown-menu.dropdown-menu-right.dropdown-animation onclick="protect($(this).parent());"
+                                li
+                                  form.search-box.margin-clear role="search" action="/recherche" method="get"
+                                    .form-group.has-feedback
+                                      input.form-control#search_input type="text" placeholder="Chercher" name="mots_clefs" autofocus="autofocus"
+                                      i.icon-search.form-control-feedback onclick="this.parentNode.parentNode.submit()"
+                            = render partial:"layouts/acces_rapide"
+                            - if User.current_user
+                              | &nbsp;
+                              = render partial: "bouton-ajout-contenu"
+      = render partial:"layouts/ariane"
+      - if action_name == "route" and @objet.present?
+        .container
+          #partage style="float:right; font-size: 17px;"
+            span style="font-size: 13px;"
+              | Partager cette page :&nbsp;
+            a href="javascript:window.print()"
+              i.fa.fa-print
+            | &nbsp;&nbsp;
+            a href="mailto:?subject=CHU de REIMS - #{@objet.titre}&body=#{@objet.description}%0A%0Avoir la page complète sur le site : #{request.original_url}"
+              i.fa.fa-envelope
+            | &nbsp;&nbsp;
+            a href="https://www.facebook.com/sharer/sharer.php?u=#{request.original_url}"
+              i.fa.fa-facebook
+            | &nbsp;&nbsp;
+            - description_partage = (defined?(@contenu) and @contenu.present?) ? (("CHU de REIMS - "+@contenu.titre.to_s)[0..135-(request.original_url.size)]) : ""
+            a href='https://twitter.com/intent/tweet?url=#{request.original_url}&text=#{description_partage}'
+              i.fa.fa-twitter
+            | &nbsp;&nbsp;
+            a href="https://www.linkedin.com/shareArticle?url=#{request.original_url}"
+              i.fa.fa-linkedin
+    / - if current_user and (@objet.present? and (policy(@objet.try(:contenu)||@objet).edit? or policy(@objet.try(:contenu)||@objet).manage_etat?))
+    /   = render "layouts/edit-menu"

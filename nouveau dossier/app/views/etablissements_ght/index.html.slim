@@ -1,0 +1,23 @@
+h1 Liste des établissements du GHT Champagne
+br
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th Code
+      th
+      th
+      th
+
+  tbody
+    - @etablissements_ght.each do |etablissement_ght|
+      tr
+        td = etablissement_ght.libelle
+        td = etablissement_ght.code
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), etablissement_ght, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_etablissement_ght_path(etablissement_ght), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), etablissement_ght, class: "btn btn-outline-default" , data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouvel établissement du GHT CHampagne", new_etablissement_ght_path, class: "btn btn-outline-primary blanc"

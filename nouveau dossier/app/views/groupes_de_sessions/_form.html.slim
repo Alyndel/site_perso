@@ -1,0 +1,19 @@
+= simple_nested_form_for(@groupe_de_sessions) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :libelle
+    = f.association :formation, label_method: :libelle, value_method: :id, include_blank: false, prompt: "Choisir une formation"
+
+  fieldset
+  	.card.mt-2
+      .card-header.alert-primary Sessions :
+      .card-body
+        .row
+          .col-sm-12
+        	fieldset
+	        	= f.fields_for :sessions_formation
+						/= f.link_to_add content_tag(:i, nil, class:'fa fa-plus mr-1') + 'Ajouter une session', :sessions_formation, class: "btn btn-outline-success"
+
+  .form-actions
+    = f.button :submit

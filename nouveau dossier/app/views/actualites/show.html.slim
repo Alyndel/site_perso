@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Titre:
+  = @actualite.titre
+p
+  strong Contenu:
+  = @actualite.contenu
+
+=> link_to 'Edit', edit_actualite_path(@actualite)
+'|
+=< link_to 'Back', actualites_path

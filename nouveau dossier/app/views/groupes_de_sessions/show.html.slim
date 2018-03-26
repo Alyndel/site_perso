@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Libelle:
+  = @groupe_de_sessions.libelle
+p
+  strong Formation:
+  = @groupe_de_sessions.formation_id
+
+=> link_to 'Edit', edit_groupe_de_sessions_path(@groupe_de_sessions)
+'|
+=< link_to 'Back', groupes_de_sessions_path

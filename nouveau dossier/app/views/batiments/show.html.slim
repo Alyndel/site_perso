@@ -1,0 +1,43 @@
+.container-fluid
+  .row
+    .col-sm
+      .card
+        .card-header Bâtiment : 
+        .card-block
+          p
+            strong Nom : 
+            = @batiment.nom
+          p
+            strong Localisation : 
+            = @batiment.localisation
+          p
+            strong Etablissement : 
+            = @batiment.etablissement_id
+    .col-sm
+      .card
+        .card-block
+          = image_tag @batiment.image.url(:medium)
+  br
+  .row  
+    .col-sm
+      .card
+        .card-header Adresse : 
+        .card-block
+          p
+            strong Rue : 
+            = @batiment.rue
+          p
+            strong Code postal : 
+            = @batiment.code_postal
+          p
+            strong Ville : 
+            = @batiment.ville
+    .col-sm
+      .card
+        .card-header Plan : 
+        .card-block
+          = image_tag @batiment.plan.url
+br
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_batiment_path(@batiment), class: "btn btn-outline-warning"
+'
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", batiments_path, class: "btn btn-outline-info"

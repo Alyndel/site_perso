@@ -1,0 +1,11 @@
+= simple_form_for(@centre_de_responsabilite) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :code
+    = f.input :libelle
+
+  .form-actions
+	= button_tag class: "btn btn-outline-primary"
+		i.fa.fa-floppy-o
+		'&nbsp;Enregistrer

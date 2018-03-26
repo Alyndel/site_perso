@@ -1,0 +1,14 @@
+= simple_form_for(@session_formation) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :description
+    = f.input :date_debut
+    = f.input :heure_debut
+    = f.input :date_fin
+    = f.input :heure_fin
+    = f.input :statut
+    = f.input :presence
+
+  .form-actions
+    = f.button :submit

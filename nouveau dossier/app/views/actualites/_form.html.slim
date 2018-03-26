@@ -1,0 +1,9 @@
+= simple_form_for(@actualite) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :titre
+    = f.cktext_area :contenu
+
+  .form-actions
+    = f.button :submit

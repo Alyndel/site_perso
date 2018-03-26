@@ -1,0 +1,8 @@
+p#notice = notice
+
+p
+  strong Libellé :
+  = @matricule.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_matricule_path(@matricule), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", matricules_path, class: "btn btn-outline-info blanc"

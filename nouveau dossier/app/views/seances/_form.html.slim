@@ -1,0 +1,13 @@
+= simple_form_for(@seance) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :libelle
+    = f.input :duree
+    = f.input :formation_id
+
+  .form-actions
+	= button_tag class: "btn btn-outline-primary"
+    	i.fa.fa-floppy-o
+    	'&nbsp;Enregistrer
+    / = f.button :submit

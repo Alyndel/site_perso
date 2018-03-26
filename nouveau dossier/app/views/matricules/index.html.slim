@@ -1,0 +1,30 @@
+h1 Liste des matricules
+
+= form_tag(matricules_path, method: :get, class: "input-group mb-3") do
+	p
+		= text_field_tag :requete, params[:requete], class: "form-control"
+    .input-group-append
+		  = link_to content_tag(:i, nil, class: "fa fa-search mt-1 mr-1 ml-1 btn btn-outline-primary blanc")
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th Nom
+      th
+      th
+      th
+
+  tbody
+    - @matricules.each do |matricule|
+      tr
+        td = matricule.libelle
+        td = matricule.utilisateur.nom_usage + " " + matricule.utilisateur.prenom_usage
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), matricule, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_matricule_path(matricule), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), matricule, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau matricule", new_matricule_path, class: "btn btn-outline-primary blanc"
+

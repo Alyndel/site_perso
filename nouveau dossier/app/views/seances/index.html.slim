@@ -1,0 +1,26 @@
+h1 Liste des séances
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th Durée
+      th Formation
+      th
+      th
+      th
+
+  tbody
+    - @seances.each do |seance|
+      tr
+        td = seance.libelle
+        td = seance.duree
+        td = seance.formation_id
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), seance, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_seance_path(seance), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), seance, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouvelle séance", new_seance_path, class: "btn btn-outline-primary blanc"
+

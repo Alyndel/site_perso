@@ -1,0 +1,23 @@
+h1 Listing actualites
+
+table
+  thead
+    tr
+      th Titre
+      th Contenu
+      th
+      th
+      th
+
+  tbody
+    - @actualites.each do |actualite|
+      tr
+        td = actualite.titre
+        td = actualite.contenu
+        td = link_to 'Show', actualite
+        td = link_to 'Edit', edit_actualite_path(actualite)
+        td = link_to 'Destroy', actualite, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Actualite', new_actualite_path

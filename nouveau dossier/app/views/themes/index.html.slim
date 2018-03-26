@@ -1,0 +1,25 @@
+h1 Les thèmes de formation
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th Code
+      th Contenu
+      th
+      th
+      th
+
+  tbody
+    - @themes.each do |theme|
+      tr
+        td = theme.libelle
+        td = theme.code
+        td = theme.contenu
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), theme, class: 'btn btn-outline-default'
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_theme_path(theme), class: 'btn btn-outline-default'
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), theme, class: 'btn btn-outline-default', data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau thème", new_theme_path, class: "btn btn-outline-primary blanc"

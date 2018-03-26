@@ -1,0 +1,23 @@
+p#notice = notice
+
+.container-fluid
+	.row
+		.col-sm
+			.card
+				.card-header = "Document #id : #{@document.id}"
+				.card-block
+					p
+					  strong Libellé : 
+					  = @document.libelle
+					p
+					  strong Document : 
+					  = link_to @document.libelle, @document.document.url
+					p
+					  strong Classement : 
+					  = @document.ordre
+					p
+						strong Formation : 
+						= @document.formation_id
+br
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_document_path(@document), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", documents_path, class: "btn btn-outline-info blanc"

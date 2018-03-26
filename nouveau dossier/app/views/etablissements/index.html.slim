@@ -1,0 +1,23 @@
+h1 Listes des établissements
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Code
+      th Libellé
+      th
+      th
+      th
+
+  tbody
+    - @etablissements.each do |etablissement|
+      tr
+        td = etablissement.code
+        td = etablissement.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), etablissement, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_etablissement_path(etablissement), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), etablissement, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouvel établissement", new_etablissement_path, class: "btn btn-outline-primary blanc"

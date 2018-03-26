@@ -1,0 +1,10 @@
+.panel.panel-default
+	.panel-heading 
+		'Type de durée :
+	.panel-body
+		p
+		  strong Libellé : 
+		  = @type_duree.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil blanc mr-1") + "Modifier", edit_type_duree_path(@type_duree), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply blanc mr-1") + "Retour", types_duree_path, class: "btn btn-outline-info blanc"

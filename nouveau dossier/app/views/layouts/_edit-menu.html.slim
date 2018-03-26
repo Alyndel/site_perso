@@ -1,0 +1,96 @@
+- if @objet
+  fieldset#edit-menu.draggable
+    legend.handle
+      i.fa.fa-bars.pr-10
+      = @objet.class.to_s
+      - if @objet.id.present?
+        = "(#{@objet.id}, #{@objet.slug})"
+
+    div
+      - if policy(@objet.try(:contenu)||@objet).manage_etat?
+        - if action_name == "new"
+          = link_to content_tag(:i, '', class:'fa fa-save btn_sauvegarde', title:"Créer brouillon"), \
+                            "#",\
+                            class:"btn btn-sm btn-warning", data:{turbolinks: false}
+
+        - else
+          - if policy(@objet).edit?
+
+            - if @objet.id
+              - if action_name != "edit"
+                = link_to content_tag(:i, '', class:'fa fa-edit', title:"Modifier"), \
+                              {action: :edit, controller: @objet.class.to_s.pluralize.downcase, id: @objet.id},\
+                              class:"btn btn-sm btn-warning", data:{turbolinks: false}
+              - else
+                = link_to content_tag(:i, '', class:'fa fa-arrow-left', title:"Retour"), \
+                              {action: :show, controller: @objet.class.to_s.pluralize.downcase, id: @objet.id},\
+                              class:"btn btn-sm btn-default", data:{turbolinks: false}
+
+                span.pr-10 &nbsp;
+
+                = link_to content_tag(:i, '', class:'fa fa-save btn_sauvegarde', title:"Enregistrer"), \
+                              "#",\
+                              class:"btn btn-sm btn-warning", data:{turbolinks: false}
+
+            - if @objet.id and policy(@objet).destroy?
+              span.pr-10 &nbsp;
+              = link_to content_tag(:i, '', class:'fa fa-trash', title:"Supprimer"), \
+                     {action: :destroy, controller: @objet.class.to_s.pluralize.downcase, id: @objet.id},\
+                      method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, \
+                      class:"btn btn-sm btn-danger"
+
+            span.pr-10 &nbsp;
+
+          = render 'bouton-workflow' if @objet.id
+          - if @objet.methods.include? :date_valide?
+            - unless @objet.date_valide?
+              .alert.alert-icon.alert-warning.object-non-visible.animated.object-visible.swing.petit-texte data-animation-effect="swing" data-effect-delay="800"
+                i.fa.fa-clock-o
+                strong Période d'affichage
+                div
+                  | du&nbsp;:&nbsp;
+                  = l @objet.date_debut, format: :moyen
+                div
+                  |au&nbsp;:&nbsp;
+                  = l @objet.date_fin, format: :moyen
+
+
+          hr
+
+
+          | Voir :&nbsp;
+          = link_to content_tag(:i, '', class:'fa fa-archive', title:"Voir l'archive"), \
+                  @objet.get_archive.try(:chemin),\
+                  class:"btn btn-sm #{"active" if @objet.etat == "archive"} #{@objet.a_archive? ? 'btn-default' : 'btn-gray'}"
+          | &nbsp;
+          = link_to content_tag(:i, '', class:'fa fa-check-square-o', title:"Voir version valide"), \
+                  @objet.get_valide.try(:chemin),\
+                  class:"btn btn-sm #{"active" if @objet.etat == "valide"} #{@objet.a_valide? ? 'btn-success' : 'btn-gray'}"
+          | &nbsp;
+          = link_to content_tag(:i, '', class:'fa fa-pencil', title:"Voir le brouillon"), \
+                  @objet.get_brouillon.try(:chemin),\
+                  class:"btn btn-sm #{"active" if @objet.etat == "brouillon" or @objet.etat == "soumis"} #{@objet.a_brouillon? ? 'btn-danger' : 'btn-gray'}"
+
+          - if @objet.try(:visible_dans_menu) == false # Ne doit pas être a nil
+            hr
+            .label.label-danger
+              | Invisible dans les menus
+          - if @objet.persisted?
+            hr
+            .petit-texte
+              strong.pr-10 Historique
+              i.fa.fa-history
+              div
+                | Créé le&nbsp;
+                =l @objet.created_at, format: :moyen
+              - if @objet.created_by
+                div
+                  | par&nbsp;
+                  = @objet.created_by
+              div
+                | Modifié le&nbsp;
+                =l @objet.updated_at, format: :moyen
+              - if @objet.updated_by
+                div
+                  | par&nbsp;
+                  = @objet.updated_by

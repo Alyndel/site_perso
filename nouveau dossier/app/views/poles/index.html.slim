@@ -1,0 +1,23 @@
+h1 Liste des pôles
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Code
+      th Libellé
+      th
+      th
+      th
+
+  tbody
+    - @poles.each do |pole|
+      tr
+        td = pole.code
+        td = pole.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), pole, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_pole_path(pole), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), pole, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau pôle", new_pole_path, class: "btn btn-outline-primary blanc"

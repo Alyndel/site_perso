@@ -1,0 +1,30 @@
+.form-inline
+  .container
+    / Affichage du nombre de places restantes pour la formation.
+    / .row
+    /   .col-sm
+    /     p
+    /       strong Nombre de places disponibles :
+    /       - places_dispo = @formation.nb_inscription_max - @formation.sessions.utilisateurs.count
+    /       = places_dispo + "places"
+    .row
+      .col-sm = f.input :description, label: "Description : ", as: :text
+    .row
+      .col-sm = f.input :date_debut, label: "Date de début : ", as: :date
+    .row
+      .col-sm = f.input :heure_debut, label: "Heure de début : "
+    .row
+      .col-sm = f.input :date_fin, label: "Date de fin : "
+    .row
+      .col-sm = f.input :heure_fin, label: "Heure de fin : "
+    .row
+      .col-sm = f.input :statut, label: "Statut : "
+    .row
+      .col-sm = f.input :presence, label: "Présence : "
+    .row
+      .col-sm = f.input :formation_id, as: :hidden, placeholder: @formation.id
+    .row
+      .col-sm = f.input :salle_id, label: "Salle_id : "
+    br
+    .row
+      .col-sm = f.link_to_remove content_tag(:i, nil, class: "fa fa-trash-o blanc") + " Supprimer cette session", class: "btn btn-danger blanc"

@@ -1,0 +1,12 @@
+= simple_form_for(@groupe) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :code, label: "Code : "
+    = f.input :libelle, label: "Libellé : "
+    = f.input :type_groupe, label: "Type de groupe : "
+
+  .form-actions
+	= button_tag class: "btn btn-outline-primary"
+		i.fa.fa-floppy-o
+		'&nbsp;Enregistrer

@@ -1,0 +1,127 @@
+.panel.panel-default
+  .row
+    .col-sm-2
+      #v-pills-tab.nav.flex-column.nav-pills aria-orientation="vertical" role="tablist"
+        a#v-pills-home-tab.nav-link.active aria-controls="v-pills-home" aria-selected="true" data-toggle="pill" href="#v-pills-formation" role="tab"  Formation
+        a#v-pills-profile-tab.nav-link aria-controls="v-pills-profile" aria-selected="false" data-toggle="pill" href="#v-pills-sessions" role="tab"  Sessions
+        a#v-pills-messages-tab.nav-link aria-controls="v-pills-messages" aria-selected="false" data-toggle="pill" href="#v-pills-documents" role="tab"  Documents
+    .col-sm-10
+      #v-pills-tabContent.tab-content
+        #v-pills-formation.tab-pane.fade.show.active aria-labelledby="v-pills-formation-tab" role="tabpanel"
+          .card
+            .card-header.alert-primary Informations générales
+            .card-body
+              .row
+                .col
+                  p
+                  strong Code : 
+                  = @formation.code
+                .col
+                  p
+                  strong Libellé : 
+                  = @formation.libelle
+                .col-4
+                .col
+                  p
+                  strong Thème : 
+                  = @formation.try(:theme).try(:libelle)  
+              .row
+                .col
+                  p
+                    strong Description : 
+                    = @formation.description
+              .row
+                .col
+                  p
+                    strong Etablissement GHT : 
+                    - @formation.etablissements_ght.each do |le_etab|
+                      = le_etab.libelle
+              .row
+                .col-2
+                  p
+                    strong Inscription ouverte : 
+                    - if (@formation.inscription_ouverte == true)
+                      = 'Oui'
+                    - else
+                      = 'Non'
+                .col-2
+                  p
+                    strong Nb inscription min : 
+                    = @formation.nb_inscription_min
+                .col-2
+                  p
+                    strong Nb inscription max : 
+                    = @formation.nb_inscription_max
+          .card.mt-2
+            .card-header.alert-primary Programme et objectifs pédagogiques
+            .card-body
+              .row
+                p
+                  strong Durée : 
+                  = "#{@formation.duree} #{@formation.try(:type_duree).try(:libelle)}"
+              .row
+                p
+                  strong Mode d'apprentissage : 
+                  = @formation.try(:type_formation).try(:libelle)
+              .row
+                p
+                  strong Programme detaillé : 
+                  = @formation.programme_detaille
+              .row
+                p
+                  strong Objectifs pédagogiques : 
+                  = @formation.objectifs_pedagogiques
+              .row
+                p
+                  strong Conditions spécifiques : 
+                  = @formation.conditions_specifiques
+          .card.mt-2
+            .card-header.alert-primary Séances : 
+            .card-body
+              .row
+                .col-sm-12
+                  table.table.table-condensed.table-striped
+                    .thead
+                      tr
+                        th Libellé
+                        th Durée
+
+                    tbody
+                      - @formation.seances.each do |s|
+                        tr
+                          td = s.libelle
+                          td = s.duree
+              br
+        #v-pills-sessions.tab-pane.fade aria-labelledby="v-pills-sessions-tab" role="tabpanel"
+          .row.alert.alert-info
+              .col Sessions :
+          .row
+            .col-md-12
+              table.table.table_condensed.table-striped
+                thead
+                  tr
+                    th Libellé
+                    th Date(s)
+                    th
+                    th
+                    th
+                tbody
+                  - @formation.groupe_de_sessions.each do |s|
+                    tr
+                      td = s.libelle
+                      td = concatener_des_dates(s.sessions_formation)
+                      td = link_to content_tag(:i, nil, class: "fa fa-eye"), groupe_de_sessions_path(s.id), class: "btn btn-outline-default"
+                      td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_groupe_de_sessions_path(s.id), class: "btn btn-outline-default"
+                      td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), groupe_de_sessions_path(s.id), class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+              = link_to content_tag(:i, nil, class: 'fa fa-plus mr-1') + 'Ajouter des sessions', new_groupe_de_sessions_path(@formation.id), class: "btn btn-outline-success seance"
+        #v-pills-documents.tab-pane.fade aria-labelledby="v-pills-documents-tab" role="tabpanel"
+            .row.alert.alert-info
+              .col Documents
+            .row
+              .col-md-12
+                'A venir ...
+  .row
+    .col-2
+    .col-10
+      => link_to content_tag(:i, nil, class: "fa fa-pencil blanc mr-1") + "Modifier", edit_formation_path(@formation), class: "btn btn-outline-warning blanc"
+      =< link_to content_tag(:i, nil, class: "fa fa-reply blanc mr-1")  + "Retour", formations_path, class: "btn btn-outline-info blanc"

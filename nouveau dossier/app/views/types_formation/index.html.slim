@@ -1,0 +1,21 @@
+h1 Liste des modes d'apprentissage
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th
+      th
+      th
+
+  tbody
+    - @types_formation.each do |type_formation|
+      tr
+        td = type_formation.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), type_formation, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_type_formation_path(type_formation), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), type_formation, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Ajouter un mode d'apprentissage", new_type_formation_path, class: "btn btn-outline-primary blanc"

@@ -1,0 +1,4 @@
+- if menu.layout_menu.present?
+  == render partial: 'layouts/disposition_menu/'+menu.layout_menu, locals: {niveau: 0, objet: menu} if menu.enfants.visibles_dans_menu.any?
+- else
+  == render partial: 'layouts/disposition_menu/menu', locals: {niveau: 0, objet: menu} if menu.enfants.visibles_dans_menu.any?

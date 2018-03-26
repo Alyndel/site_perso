@@ -1,0 +1,60 @@
+= simple_nested_form_for(@formation) do |f|
+  = f.error_notification
+
+
+  .form-inputs
+    .row
+      .col-sm-2
+        #v-pills-tab.nav.flex-column.nav-pills aria-orientation="vertical" role="tablist" 
+          a#v-pills-home-tab.nav-link.active aria-controls="v-pills-home" aria-selected="true" data-toggle="pill" href="#v-pills-formation" role="tab" Formation
+      .col-sm-10
+        #v-pills-tabContent.tab-content
+          #v-pills-formation.tab-pane.fade.show.active aria-labelledby="v-pills-formation-tab" role="tabpanel"
+            .card
+              .card-header.alert-primary Informations générales
+              .card-body 
+                .row
+                  .col-6
+                    = f.input :libelle, label: "Libellé : "
+                  .col-3
+                    = f.input :code, label: "Code : "
+                  .col-3
+                    = f.association :theme, label_method: :libelle, value_method: :id, include_blank: false, prompt: "Choisir un thème"
+                .row
+                  .col = f.input :description, label: "Description : "
+                .row
+                  / .col = f.association :etablissements_ght_id, label_method: :libelle, value_method: :id, include_blank: false, prompt: "Choisir un établissement du G.H.T."
+                  / .col = f.association :etablissements_ght, collection: EtablissementGht.all.order(:libelle).pluck(:libelle,:id), input_html: { class: 'multiselectuser'}, label: "Etablissements du G.H.T. :"
+                  .col = f.association :etablissements_ght, label_method: :libelle
+                .row
+                  .col-sm-2 = f.input :inscription_ouverte
+                .row
+                  .col-sm-4 = f.input :nb_inscription_min, label: "Nombre d'inscription minimum : "
+                  .col-sm-4 = f.input :nb_inscription_max, label: "Nombre d'inscription maximum : "
+            .card.mt-2
+              .card-header.alert-primary Programme et objectifs pédagogiques
+              .card-body
+                .row
+                  .col-sm-1 = f.input :duree, label: "Durée : ", class: "form-control"
+                  .col-sm-3 = f.association :type_duree, label_method: :libelle, value_method: :id, include_blank: false, prompt: "Choisir un type de durée", label: "Type de durée : "
+                  .col-sm-3 = f.association :type_formation, label_method: :libelle, value_method: :id, include_blank: false, prompt: "Choisir un mode d'apprentissage", class: "form-control", label: "Mode d'apprentissage : "
+                .row
+                  .col-sm-6 = f.input :programme_detaille, label: "Programme détaillé : "
+                  .col-sm-6 = f.input :objectifs_pedagogiques, label: "Objectifs pédagogiques : "
+                .row
+                .row
+                  .col = f.input :conditions_specifiques, label: "Conditions spécifiques : "
+            .card.mt-2
+              .card-header.alert-primary Séances :
+              .card-body
+                .row
+                  .col-sm-12
+                  = f.fields_for :seances
+                  = f.link_to_add content_tag(:i, nil, class:'fa fa-plus mr-1')+'Ajouter une séance', :seances, class: "btn btn-outline-success"
+
+  br
+  .form-actions
+    = button_tag class: "btn btn-outline-primary"
+      i.fa.fa-floppy-o
+      '&nbsp;Enregistrer
+    / = f.button :submit

@@ -1,0 +1,12 @@
+= simple_form_for(@etablissement_ght) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :code, label: "Code : "
+    = f.input :libelle, label: "Libellé : "
+
+  .form-actions
+	= button_tag class: "btn btn-outline-primary"
+		i.fa.fa-floppy-o
+		'&nbsp;Enregistrer
+    / = f.button :submit

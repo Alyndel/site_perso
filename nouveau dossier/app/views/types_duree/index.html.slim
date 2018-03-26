@@ -1,0 +1,21 @@
+h1 Les types de durée
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Libellé
+      th
+      th
+      th
+
+  tbody
+    - @types_duree.each do |type_duree|
+      tr
+        td = type_duree.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), type_duree, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_type_duree_path(type_duree), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), type_duree, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-floppy-o blanc mr-1") + "Ajouter un type de durée", new_type_duree_path, class: "btn btn-outline-primary blanc"

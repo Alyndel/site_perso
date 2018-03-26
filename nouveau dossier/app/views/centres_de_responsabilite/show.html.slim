@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Code :
+  = @centre_de_responsabilite.code
+p
+  strong Libellé :
+  = @centre_de_responsabilite.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_centre_de_responsabilite_path(@centre_de_responsabilite), class: "btn btn-outline-warning blanc"
+'|
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", centres_de_responsabilite_path, class: "btn btn-outline-info blanc"

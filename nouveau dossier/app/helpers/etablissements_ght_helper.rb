@@ -1,0 +1,2 @@
+module EtablissementsGhtHelper
+end

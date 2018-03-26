@@ -1,0 +1,33 @@
+h1 Liste des salles
+
+table.table
+  thead
+    tr
+      th Nom
+      / th Description
+      th Capacité
+      th Niveau
+      / th Plan
+      / th Image
+      th Batiment
+      th
+      th
+      th
+
+  tbody
+    - @salles.each do |salle|
+      tr
+        td = salle.nom
+        / td = salle.description
+        td = salle.capacite
+        td = salle.niveau
+        / td = salle.plan
+        / td = salle.image
+        td = salle.batiment_id
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), salle, class: "btn btn-outline-success"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_salle_path(salle), class: "btn btn-outline-warning"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), salle, class: "btn btn-outline-danger", data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus") + "Nouvelle salle", new_salle_path, class: "btn btn-outline-primary"

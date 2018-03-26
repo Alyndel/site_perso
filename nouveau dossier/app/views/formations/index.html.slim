@@ -1,0 +1,50 @@
+h1 Liste des formations
+
+= javascript_include_tag 'recherche.js'
+= javascript_include_tag 'jquery.dataTables.min.js'
+
+br
+table#tableau.table.table-condensed.table-striped
+  thead
+    tr
+      th Code
+      th Libellé
+      / th Description
+      th Inscription ouverte
+      th Nb d'inscrit min.
+      th Nb d'inscrit max.
+      th Durée
+      / th Programme detaille
+      / th Objectifs pedagogiques
+      / th Conditions specifiques
+      th Thème
+      th Mode apprentissage
+      th
+      th
+      th
+
+  tbody
+    - @formations.each do |formation|
+      tr
+        td = formation.code
+        td = formation.libelle
+        / td = formation.description
+        - if formation.inscription_ouverte == true
+          td = "Oui"
+        - else
+          td = "Non"
+        td = formation.nb_inscription_min
+        td = formation.nb_inscription_max
+        td = "#{formation.duree} #{formation.try(:type_duree).try(:libelle)}"
+        / td = formation.programme_detaille
+        / td = formation.objectifs_pedagogiques
+        / td = formation.conditions_specifiques
+        td = formation.try(:theme).try(:libelle)
+        td = formation.try(:type_formation).try(:libelle)
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), formation, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_formation_path(formation), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), formation, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr(e) ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Ajouter une formation", new_formation_path, class: "btn btn-outline-primary blanc"

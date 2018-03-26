@@ -1,0 +1,78 @@
+= render 'layouts/header'
+= csrf_meta_tag
+= yield
+= render 'layouts/footer'
+
+/ doctype html
+/ html
+/   head
+/     title [CI0452] - Portail Formation
+/     title
+/     meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+/     = stylesheet_pack_tag "application", media: "all"
+/     = javascript_pack_tag "app"
+/     = csrf_meta_tags
+
+/   body
+/     .nav.navbar.navbar-default.navbar-inverse role="navigation"
+/       .navbar-header
+/         button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+/           span.icon-bar
+/           span.icon-bar
+/           span.icon-bar
+/         a.navbar-brand href='#'
+/           = image_tag "logo_chu.png", height: '28', width: '28'
+/           '&nbsp;Portail de formation
+/       .collapse.navbar-collapse
+/         ul.nav.navbar-nav
+/           li.active
+/             =link_to content_tag(:i, ' ', class:"fa fa-home")+' Accueil', '/'
+/           li.dropdown
+/             a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+/               'Catalogue
+/               span.caret
+/               ul.dropdown-menu
+/                 li
+/                   = link_to 'Les thèmes de formation', themes_path
+/                 li
+/                   = link_to 'Les formations', formations_path
+/                 li.divider role="separator"
+/                 li
+/                   a href="#" Separated link
+/                 li.divider role="separator"
+/                 li
+/                   a href="#" One more separated link
+/           li.dropdown
+/             a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+/               'Administration
+/               span.caret
+/               ul.dropdown-menu
+/                 li
+/                   = link_to 'Les établissements du GHT', etablissements_ght_path
+/                 li.divider role="separator"
+/                 li
+/                   = link_to 'Les modes d\'apprentissage', types_formation_path
+/                 li
+/                   = link_to 'Les types de durée', types_duree_path
+/           li
+/             =link_to content_tag(:i, ' ', class:"fa fa-info-circle")+' À propos', '#'
+/         ul.nav.navbar-nav.navbar-right
+/           -if User.current_user
+/             -lib_connect = User.current_user.nom_complet
+/             li.dropdown
+/               a href="#" class="dropdown-toggle" data-toggle="dropdown"
+/                 = content_tag(:i, ' ', class:"fa fa-sign-out") + " #{lib_connect}"
+/               ul.dropdown-menu
+/                 -if User.current_user
+/                   li.span3
+/                     =link_to "Se déconnecter", logout_path
+
+/           -else
+/             li.dropdown
+/               =link_to content_tag(:i, ' ', class:"fa fa-sign-in")+' Connexion', login_path
+
+
+/     .container
+/       = render "layouts/flash"
+/       = yield

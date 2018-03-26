@@ -1,0 +1,11 @@
+p#notice = notice
+
+p
+  strong Code :
+  = @unite_fonctionnelle.code
+p
+  strong Libellé :
+  = @unite_fonctionnelle.libelle
+
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_unite_fonctionnelle_path(@unite_fonctionnelle), class: "btn btn-outline-warning blanc"
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", unites_fonctionnelles_path, class: "btn btn-outline-info blanc"

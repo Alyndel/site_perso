@@ -1,0 +1,11 @@
+.card
+	.card-header 
+		'Mode d'apprentissage
+	.card-block
+		br
+		p
+		  strong Libellé : 
+		  = @type_formation.libelle
+br
+=> link_to content_tag(:i, nil, class: "fa fa-pencil mr-1") + "Modifier", edit_type_formation_path(@type_formation), class: 'btn btn-outline-warning blanc'
+=< link_to content_tag(:i, nil, class: "fa fa-reply mr-1") + "Retour", types_formation_path, class: 'btn btn-outline-info blanc'

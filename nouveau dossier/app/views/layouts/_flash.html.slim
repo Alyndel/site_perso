@@ -1,0 +1,13 @@
+/ Les types possibles sont :
+/ alert
+/ error
+/ notice
+/ success
+- flash.each do |type, message|
+  .alert.fade.in class="alert-#{twitterized_type(type)}"
+    a.close data-dismiss="alert" href="#" | &times;
+    p
+      i.fa.fa-exclamation-circle &nbsp;
+      span &nbsp;
+      = message
+

@@ -1,0 +1,12 @@
+/ Piqué du site web du CHU
+/
+/ - Contenu.tagged_with(:acces_rapide).order(:ordre).each do |c|
+/   - couleur_fond = c.couleur_fond || "#fff"
+/   - couleur_icone = c.couleur_icone || "#777"
+/   .btn-group style="margin-right: 0px"
+/     a.btn.hover-couleur-b href="#{c.chemin}" title="#{c.titre}" data-toggle="tooltip" data-placement="bottom"
+/       - if c.icone?
+/         i.fa class="#{c.icone}" style="color: #{couleur_icone};"
+/       - else
+/         img src="#{c.image_acces_rapide.url}"
+

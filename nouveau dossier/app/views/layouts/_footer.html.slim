@@ -1,0 +1,36 @@
+- if @objet.present? and @objet.try(:mots_cles_metier).present?
+  #ligne_mots_cles
+    b
+      | Mots-clés :&nbsp;
+    = @objet.mots_cles_metier.sort.join(", ")
+
+- unless session["cookie"].present?
+  - session["cookie"] = true
+  #laius_cookie
+    | Le CHU de REIMS utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation de cookies sur ce site.
+    .btn.btn-dark Ok
+
+footer#footer.clearfix.dark
+  .footer
+    .container
+      .footer-inner
+        .row
+          .col-md-8.col-md-offset-2
+            .footer-content.text-center.padding-ver-clear
+              ul.list-inline
+                / - Contenu.tagged_with("footer").valide.each do |f|
+                /   li
+                /     a href='#{f.chemin}'
+                /       i.text-default.fa class="#{f.icone}"
+                /       | &nbsp;
+                /       = f.titre
+              p.text-center.margin-clear Le CHU de REIMS - Copyright © 2018 DSIT du CHU de REIMS
+              - if (Rails.env == "production" and ((Rails.application.config.action_controller.asset_host =~ /^https:\/\/www-preprod\./) != nil))
+                p.text-center.margin-clear = "#{Rails.env.to_s} sur #{Rails.application.config.action_controller.asset_host} (user : #{current_user})"
+
+/ - if action_name == 'edit' or action_name == 'new' or (action_name == 'index' and controller_name == "dossiers") or User.current_user
+/   = content_tag :span, nil, id: "ckeditor_config_path", data:{value: asset_path("ckeditor/ckeditor_config.js")}
+/   = javascript_include_tag "admin", 'data-turbolinks-track': 'reload'
+
+/ = javascript_include_tag "public", 'data-turbolinks-track': 'reload'
+pre = current_user

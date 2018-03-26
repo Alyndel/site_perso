@@ -1,0 +1,18 @@
+- if defined? lien_contenu
+  li 
+    span id_contenu="#{lien_contenu.id}"
+      = lien_contenu.titre
+    == render partial: 'layouts/lien_contenu', locals: {enfants: lien_contenu.enfants} if lien_contenu.enfants.any?
+- elsif defined? enfants
+  ul
+    - enfants.each do |e|
+      - if e.enfants.any?
+        li
+          span id_contenu="#{e.id}"
+            = e.titre
+          == render partial: 'layouts/lien_contenu', locals: {enfants: e.enfants.order(:ordre)}
+      - else
+        - if e.titre != "index"
+          li 
+            span id_contenu="#{e.id}"
+              = e.titre

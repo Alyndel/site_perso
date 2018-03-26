@@ -1,0 +1,29 @@
+h1 Liste des groupes
+
+= javascript_include_tag 'recherche.js'
+= javascript_include_tag 'jquery.dataTables.min.js'
+
+
+table#tableau.table.table-condensed.table-striped
+  thead
+    tr#ligne
+      th Code
+      th Libellé
+      th Type
+      th
+      th 
+      th
+
+  tbody
+    - @groupes.each do |groupe|
+      tr
+        td = groupe.code
+        td = groupe.libelle
+        td = groupe.type_groupe
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), groupe, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_groupe_path(groupe), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), groupe, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau groupe", new_groupe_path, class: "btn btn-outline-primary blanc"

@@ -1,0 +1,30 @@
+h1 Liste des unités fonctionnelles
+
+= javascript_include_tag 'recherche.js'
+= javascript_include_tag 'jquery.dataTables.min.js'
+
+table#tableau.table.table-condensed.table-striped
+  thead
+    tr
+      th Code
+      th Libellé
+      th Centre de responsabilité
+      th Etablissement
+      th
+      th
+      th
+
+  tbody
+    - @unites_fonctionnelles.each do |unite_fonctionnelle|
+      tr
+        td = unite_fonctionnelle.code
+        td = unite_fonctionnelle.libelle
+        td = unite_fonctionnelle.centre_de_responsabilite.code + " - " + unite_fonctionnelle.centre_de_responsabilite.libelle_court
+        td = unite_fonctionnelle.etablissement_ght.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), unite_fonctionnelle, class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_unite_fonctionnelle_path(unite_fonctionnelle), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), unite_fonctionnelle, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouvelle unité fonctionnelle", new_unite_fonctionnelle_path, class: "btn btn-outline-primary blanc"

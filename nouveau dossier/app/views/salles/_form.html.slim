@@ -1,0 +1,24 @@
+= simple_form_for(@salle) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .container-fluid
+      .row
+        .col-sm = f.input :nom, label: "Nom : "
+        .col-sm = f.input :capacite, label: "Capacité : "
+      .row
+        .col-sm = f.input :image, label: "Image : ", as: :file
+      .row
+        .col-sm = f.input :description, label: "Description : "
+      .row
+        .col-sm = f.input :batiment_id, label: "Bâtiment : "
+      .row
+        .col-sm = f.input :niveau, label: "Niveau : "
+      .row
+        .col-sm = f.input :plan, label: "Plan : ", as: :file
+
+  .form-actions
+    = button_tag class: "btn btn-outline-primary"
+      i.fa.fa-floppy-o
+      '&nbsp;Enregistrer
+    / = f.button :submit

@@ -1,0 +1,2 @@
+module CentresDeResponsabiliteHelper
+end

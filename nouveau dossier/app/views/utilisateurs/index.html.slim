@@ -1,0 +1,41 @@
+h1 Liste des utilisateurs
+
+/ Création d'un formulaire, permettant de transmettre la recherche à la même page.
+
+= form_tag(utilisateurs_path, method: :get, class: "input-group mb-3") do
+	p
+		= text_field_tag :requete, params[:requete], class: "form-control"
+		.input-group-append
+			= link_to content_tag(:i, nil, class: "fa fa-search mt-1 mr-1 ml-1 btn btn-outline-primary blanc")
+
+
+table#tableau.table.table-condensed.table-striped
+  thead
+    tr
+      th IdRES
+      th Nom d'usage
+      th Prénom
+      th Date de naissance
+      th Date d'entrée au CHU
+      / th Date de sortie au CHU
+      th
+      th
+      th
+
+  tbody
+		- @utilisateurs.each do |utilisateur|
+			tr#ligne
+				td = utilisateur.idres
+				td = utilisateur.nom_usage
+				td = utilisateur.prenom_usage
+				td = utilisateur.date_naissance
+				td = utilisateur.date_entree
+				/ td = utilisateur.date_sortie
+				td = link_to content_tag(:i, nil, class: "fa fa-eye"), utilisateur, class: "btn btn-outline-default"
+				td = link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_utilisateur_path(utilisateur), class: "btn btn-outline-default"
+				td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), utilisateur, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouvel utilisateur", new_utilisateur_path, class: "btn btn-outline-primary blanc"

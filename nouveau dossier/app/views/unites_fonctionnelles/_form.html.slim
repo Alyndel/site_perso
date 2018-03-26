@@ -1,0 +1,28 @@
+= simple_form_for(@unite_fonctionnelle) do |f|
+	= f.error_notification
+
+	.form-inputs
+    	= f.input :code
+    	= f.input :libelle
+
+	.field
+   	= f.label :etablissement_id
+   	= f.collection_select :etablissement_id, Etablissement.order("libelle").all, :id, :libelle
+
+  	.field
+   	= f.label :etablissement_ght_id
+   	= f.collection_select :etablissement_ght_id, EtablissementGht.order("libelle").all, :id, :libelle
+
+  	.field
+   	= f.label :pole_id
+   	= f.collection_select :pole_id, Pole.order("libelle").all, :id, :libelle
+
+  	.field
+   	= f.label :centre_de_responsabilite_id
+   	= f.collection_select :centre_de_responsabilite_id, CentreDeResponsabilite.order("libelle").all, :id, :libelle
+
+  	.form-actions
+   		= button_tag class: "btn btn-outline-primary"
+				i.fa.fa-floppy-o
+				'&nbsp;Enregistrer
+      	/ = f.button :submit

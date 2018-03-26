@@ -1,0 +1,23 @@
+h1 Liste des centres de responsabilité
+
+table.table.table-condensed.table-striped
+  thead
+    tr
+      th Code
+      th Libellé
+      th
+      th
+      th
+
+  tbody
+    - @centres_de_responsabilite.each do |centre_de_responsabilite|
+      tr
+        td = centre_de_responsabilite.code
+        td = centre_de_responsabilite.libelle
+        td = link_to content_tag(:i, nil, class: "fa fa-eye"), centre_de_responsabilite, class: "btn btn-outline-default"
+        td = link_to link_to content_tag(:i, nil, class: "fa fa-pencil"), edit_centre_de_responsabilite_path(centre_de_responsabilite), class: "btn btn-outline-default"
+        td = link_to content_tag(:i, nil, class: "fa fa-trash-o"), centre_de_responsabilite, class: "btn btn-outline-default", data: { confirm: 'Êtes-vous sûr ?' }, method: :delete
+
+br
+
+= link_to content_tag(:i, nil, class: "fa fa-plus mr-1") + "Nouveau centre de responsabilité", new_centre_de_responsabilite_path, class: "btn btn-outline-primary blanc"

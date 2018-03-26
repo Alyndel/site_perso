@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Description:
+  = @session_formation.description
+p
+  strong Date debut:
+  = @session_formation.date_debut
+p
+  strong Heure debut:
+  = @session_formation.heure_debut
+p
+  strong Date fin:
+  = @session_formation.date_fin
+p
+  strong Heure fin:
+  = @session_formation.heure_fin
+p
+  strong Statut:
+  = @session_formation.statut
+p
+  strong Presence:
+  = @session_formation.presence
+
+=> link_to 'Edit', edit_session_formation_path(@session_formation)
+'|
+=< link_to 'Back', sessions_formation_path

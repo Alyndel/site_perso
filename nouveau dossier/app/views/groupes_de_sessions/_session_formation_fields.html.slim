@@ -1,0 +1,36 @@
+.form-inline
+  .container
+    / Affichage du nombre de places restantes pour la formation.
+    / .row
+    /   .col-sm
+    /     p
+    /       strong Nombre de places disponibles :
+    /       - places_dispo = @formation.nb_inscription_max - @formation.sessions.utilisateurs.count
+    /       = places_dispo + "places"
+    .form-group.row
+      .col = f.input :description, as: :text, label: false, as: :text, placeholder: "Description", class: 'form-control form-control-sm'
+    .form-group.row
+      .col = f.input :date_debut, label: "Date de début : ", as: :date, class: 'form-control form-control-sm'
+      .col = f.input :heure_debut, label: "Heure de début : ", class: 'form-control form-control-sm'
+    .form-group.row
+      .col = f.input :date_fin, label: "Date de fin : ", class: 'form-control form-control-sm'
+      .col = f.input :heure_fin, label: "Heure de fin : ", class: 'form-control form-control-sm'
+    .form-group.row
+      .col = f.input :statut, label: false, placeholder: "Statut", class: 'form-control form-control-sm'
+    .form-group.row
+      .col = f.input :formation_id, as: :hidden, placeholder: @groupe_de_sessions.formation.id.to_s, class: 'form-control form-control-sm'
+    .form-group.row
+      .col = f.association :salle, label: false, label_method: :nom, value_method: :id, include_blank: false, prompt: "Choisir une salle", class: 'form-control form-control-sm'
+    br
+    / .container
+    /   .row
+    /     .col-sm-6
+    /       .form-group
+    /         #datetimepicker4.input-group.date  data-target-input="nearest"
+    /             input.form-control.datetimepicker-input type="text"  data-target="#datetimepicker4"
+    /               .input-group-append data-target="#datetimepicker4" data-toggle="datetimepicker"
+    /                 .input-group-text
+    /                   i.fa.fa-calendar
+    / br
+    .row
+      .col = f.link_to_remove content_tag(:i, nil, class: "fa fa-trash-o blanc") + " Supprimer cette session", class: "btn btn-danger blanc"
